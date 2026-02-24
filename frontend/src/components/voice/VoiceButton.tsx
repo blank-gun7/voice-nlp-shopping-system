@@ -1,9 +1,8 @@
-import { useAppContext } from "../../App";
-import { useVoiceAssistant } from "../../hooks/useVoiceAssistant";
+import { useAppContext, useVoiceContext } from "../../App";
 
 export default function VoiceButton() {
   const { state } = useAppContext();
-  const { startVoice, stopVoice, isRecording } = useVoiceAssistant();
+  const { startVoice, stopVoice, isRecording } = useVoiceContext();
   const { voiceState } = state;
 
   const isListening = voiceState === "listening";

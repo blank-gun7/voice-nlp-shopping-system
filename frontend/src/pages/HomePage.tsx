@@ -1,5 +1,6 @@
 import { useHomeData } from "../hooks/useHomeData";
 import { useShoppingList } from "../hooks/useShoppingList";
+import { getFrequentItems } from "../services/preferences";
 import SearchVoiceBar from "../components/store/SearchVoiceBar";
 import SectionHeader from "../components/store/SectionHeader";
 import ProductCardRow from "../components/store/ProductCardRow";
@@ -10,6 +11,7 @@ import SkeletonLoader from "../components/shared/SkeletonLoader";
 export default function HomePage() {
   const { homeData, isLoading } = useHomeData();
   const { addItem } = useShoppingList();
+  const usualItems = getFrequentItems(8);
 
   return (
     <div className="px-4 pt-4 pb-6 space-y-6">
@@ -35,6 +37,24 @@ export default function HomePage() {
           <ProductCardRow products={homeData?.popular ?? []} />
         )}
       </section>
+
+      {/* Your Usuals — derived from local purchase history */}
+      {usualItems.length > 0 && (
+        <section>
+          <SectionHeader title="⭐ Your Usuals" />
+          <div className="flex flex-wrap gap-2">
+            {usualItems.map((name) => (
+              <ChipButton
+                key={name}
+                label={`+ ${name}`}
+                onClick={() =>
+                  addItem({ item_name: name, quantity: 1, added_via: "suggestion" })
+                }
+              />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Reorder suggestions */}
       {(homeData?.reorder?.length ?? 0) > 0 && (

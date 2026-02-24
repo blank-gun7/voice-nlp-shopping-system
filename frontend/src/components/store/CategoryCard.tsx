@@ -30,13 +30,12 @@ export default function CategoryCard({ category }: CategoryCardProps) {
   return (
     <Link
       to={`/category/${encodeURIComponent(category.name)}`}
-      className="flex flex-col items-center justify-center gap-2 p-4 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow active:scale-95"
+      className="flex flex-col items-center justify-center gap-1 py-2.5 px-2 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow active:scale-95"
     >
-      <span className="text-3xl">{categoryEmoji(category.name)}</span>
+      <span className="text-2xl">{categoryEmoji(category.name)}</span>
       <span className="text-xs font-semibold text-stone-700 capitalize text-center leading-tight">
         {category.name}
       </span>
-      <span className="text-[10px] text-stone-400">{category.count} items</span>
     </Link>
   );
 }

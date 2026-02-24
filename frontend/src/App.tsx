@@ -1,6 +1,7 @@
 import { createContext, useContext, useReducer } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import type { AppAction, AppState } from "./types";
+import type { UseVoiceAssistantReturn } from "./hooks/useVoiceAssistant";
 import Layout from "./components/layout/Layout";
 import HomePage from "./pages/HomePage";
 import CategoryPage from "./pages/CategoryPage";
@@ -66,7 +67,7 @@ function appReducer(state: AppState, action: AppAction): AppState {
   }
 }
 
-// ── Context ───────────────────────────────────────────────────────────────────
+// ── App context ───────────────────────────────────────────────────────────────
 
 export const AppContext = createContext<{
   state: AppState;
@@ -76,6 +77,16 @@ export const AppContext = createContext<{
 export function useAppContext() {
   const ctx = useContext(AppContext);
   if (!ctx) throw new Error("useAppContext must be used within AppContext.Provider");
+  return ctx;
+}
+
+// ── Voice context (singleton — created once in Layout) ────────────────────────
+
+export const VoiceContext = createContext<UseVoiceAssistantReturn | null>(null);
+
+export function useVoiceContext(): UseVoiceAssistantReturn {
+  const ctx = useContext(VoiceContext);
+  if (!ctx) throw new Error("useVoiceContext must be used within VoiceContext.Provider");
   return ctx;
 }
 

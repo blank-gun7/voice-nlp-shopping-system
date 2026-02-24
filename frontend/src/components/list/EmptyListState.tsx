@@ -1,7 +1,7 @@
-import { useVoiceAssistant } from "../../hooks/useVoiceAssistant";
+import { useVoiceContext } from "../../App";
 
 export default function EmptyListState() {
-  const { startVoice } = useVoiceAssistant();
+  const { startVoice } = useVoiceContext();
 
   return (
     <div className="flex flex-col items-center justify-center py-20 px-8 text-center">

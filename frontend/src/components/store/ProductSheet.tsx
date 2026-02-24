@@ -3,6 +3,7 @@ import { useProductSuggestions } from "../../hooks/useProductSuggestions";
 import { useShoppingList } from "../../hooks/useShoppingList";
 import ChipButton from "../shared/ChipButton";
 import CategoryBadge from "../shared/CategoryBadge";
+import { getProductVisual } from "./ProductCard";
 
 export default function ProductSheet() {
   const { state, dispatch } = useAppContext();
@@ -13,6 +14,8 @@ export default function ProductSheet() {
   const { addItem } = useShoppingList();
 
   if (!isProductSheetOpen || !selectedProduct) return null;
+
+  const visual = getProductVisual(selectedProduct.name, selectedProduct.category);
 
   const handleClose = () => {
     dispatch({ type: "SET_PRODUCT_SHEET", payload: false });
@@ -46,8 +49,8 @@ export default function ProductSheet() {
         <div className="px-5 pb-8">
           {/* Product header */}
           <div className="flex items-start gap-4 py-4 border-b border-stone-100">
-            <div className="w-20 h-20 bg-stone-100 rounded-2xl flex items-center justify-center text-4xl flex-shrink-0">
-              🛒
+            <div className={`w-20 h-20 ${visual.bg} rounded-2xl flex items-center justify-center text-4xl flex-shrink-0`}>
+              {visual.emoji}
             </div>
             <div className="flex-1 min-w-0">
               <h3 className="text-lg font-bold text-stone-800 capitalize mb-1">

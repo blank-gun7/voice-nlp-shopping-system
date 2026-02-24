@@ -1,10 +1,9 @@
-import { useAppContext } from "../../App";
-import { useVoiceAssistant } from "../../hooks/useVoiceAssistant";
+import { useAppContext, useVoiceContext } from "../../App";
 import TranscriptDisplay from "./TranscriptDisplay";
 
 export default function VoiceOverlay() {
   const { state, dispatch } = useAppContext();
-  const { stopVoice, cancelVoice, isRecording } = useVoiceAssistant();
+  const { stopVoice, cancelVoice, isRecording } = useVoiceContext();
   const { isVoiceOverlayOpen, voiceState } = state;
 
   if (!isVoiceOverlayOpen) return null;
