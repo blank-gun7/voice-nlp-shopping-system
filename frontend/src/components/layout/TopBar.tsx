@@ -10,7 +10,7 @@ export default function TopBar() {
     <header className="sticky top-0 z-30 bg-white border-b border-stone-200 px-4 h-14 flex items-center justify-between shadow-sm">
       <Link to="/" className="flex items-center gap-2">
         <span className="text-2xl">🛒</span>
-        <span className="text-base font-bold text-stone-800 tracking-tight">
+        <span className="text-base font-bold text-stone-800 tracking-tight font-heading">
           FreshCart
         </span>
       </Link>

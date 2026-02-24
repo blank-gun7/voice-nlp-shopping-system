@@ -6,7 +6,7 @@ export default function EmptyListState() {
   return (
     <div className="flex flex-col items-center justify-center py-20 px-8 text-center">
       <div className="text-7xl mb-6">🛒</div>
-      <h2 className="text-xl font-bold text-stone-700 mb-2">Your list is empty</h2>
+      <h2 className="text-xl font-bold text-stone-700 mb-2 font-heading">Your list is empty</h2>
       <p className="text-stone-400 text-sm mb-8">
         Use your voice to add items, or tap the mic button below
       </p>

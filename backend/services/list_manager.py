@@ -5,18 +5,23 @@ async (IO-bound DB calls are run via run_in_executor when needed, but
 SQLAlchemy sync sessions are fine here since we stay on the same thread).
 """
 import logging
+from datetime import datetime
 from difflib import SequenceMatcher
+from itertools import groupby
 from typing import Optional
 
 from sqlalchemy.orm import Session
 
 from backend.models.database import SessionLocal
-from backend.models.orm import ListItem, ShoppingList
+from backend.models.orm import ListItem, PurchaseHistory, ShoppingList
 from backend.models.schemas import (
     ActionResult,
     AddItemRequest,
     CategoryGroupOut,
     ListItemOut,
+    OrderHistoryResponse,
+    OrderItemOut,
+    OrderOut,
     ParsedCommand,
     ShoppingListOut,
     UpdateItemRequest,
@@ -69,7 +74,9 @@ class ListManager:
                 result = self._check_item(db, list_id, parsed)
             elif intent == "clear_list":
                 result = self._clear_list(db, list_id)
-            elif intent in {"list_items", "search_item", "get_suggestions"}:
+            elif intent == "search_item":
+                result = self._search_item(db, list_id, parsed)
+            elif intent in {"list_items", "get_suggestions"}:
                 # Read-only intents — no DB change
                 result = ActionResult(status="success", message="Here is your list.")
             else:
@@ -227,6 +234,93 @@ class ListManager:
         db.query(ListItem).filter(ListItem.list_id == list_id).delete()
         db.commit()
         return ActionResult(status="success", message="List cleared")
+
+    def _search_item(self, db: Session, list_id: int, parsed: ParsedCommand) -> ActionResult:
+        """Search the catalog for items matching the parsed query."""
+        if not parsed.item:
+            return ActionResult(status="no_change", message="No search term specified")
+
+        from backend.recommendations._catalog import CATALOG
+
+        query = parsed.item.lower().strip()
+        matches = [name for name in CATALOG if query in name]
+
+        # Filter by price_max if specified
+        if parsed.price_max is not None:
+            matches = [n for n in matches if (CATALOG[n].get("avg_price") or 0) <= parsed.price_max]
+
+        if matches:
+            top = matches[:5]
+            price_note = f" under ${parsed.price_max}" if parsed.price_max is not None else ""
+            return ActionResult(
+                status="success",
+                message=f"Found {len(matches)} results for \"{parsed.item}\"{price_note}: {', '.join(top)}",
+            )
+        return ActionResult(status="no_change", message=f"No items found for \"{parsed.item}\"")
+
+    # ── Order operations ────────────────────────────────────────────────────────
+
+    def place_order(self, db: Session, list_id: int, user_id: str = "default_user") -> ActionResult:
+        """Record all list items to PurchaseHistory and clear the list.
+
+        All items share the same purchased_at timestamp for grouping.
+        """
+        items = db.query(ListItem).filter(ListItem.list_id == list_id).all()
+        if not items:
+            return ActionResult(status="no_change", message="List is empty — nothing to order")
+
+        now = datetime.utcnow()
+        for item in items:
+            record = PurchaseHistory(
+                user_id=user_id,
+                item_name=item.item_name,
+                item_name_lower=item.item_name_lower,
+                category=item.category,
+                quantity=item.quantity,
+                unit=item.unit,
+                source_list_id=list_id,
+                purchased_at=now,
+            )
+            db.add(record)
+
+        # Clear list after recording
+        db.query(ListItem).filter(ListItem.list_id == list_id).delete()
+        db.commit()
+
+        return ActionResult(status="success", message=f"Order placed with {len(items)} items")
+
+    def get_order_history(self, db: Session, user_id: str = "default_user") -> OrderHistoryResponse:
+        """Return all past orders grouped by purchased_at timestamp."""
+        records = (
+            db.query(PurchaseHistory)
+            .filter(PurchaseHistory.user_id == user_id)
+            .order_by(PurchaseHistory.purchased_at.desc())
+            .all()
+        )
+
+        orders: list[OrderOut] = []
+        # Group by purchased_at timestamp (same timestamp = same order)
+        for ts, group in groupby(records, key=lambda r: r.purchased_at):
+            items_list = list(group)
+            order_id = ts.isoformat() if ts else "unknown"
+            orders.append(
+                OrderOut(
+                    order_id=order_id,
+                    purchased_at=ts.isoformat() if ts else "",
+                    item_count=len(items_list),
+                    items=[
+                        OrderItemOut(
+                            item_name=r.item_name,
+                            quantity=r.quantity or 1.0,
+                            unit=r.unit or "pieces",
+                            category=r.category or "other",
+                        )
+                        for r in items_list
+                    ],
+                )
+            )
+
+        return OrderHistoryResponse(orders=orders, total=len(orders))
 
 
 # ── Module-level helpers ───────────────────────────────────────────────────────

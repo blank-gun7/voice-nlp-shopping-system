@@ -51,7 +51,7 @@ export default function CategoryPage() {
           </svg>
         </button>
         <div>
-          <h1 className="text-lg font-bold text-stone-800 capitalize">{categoryName}</h1>
+          <h1 className="text-lg font-bold text-stone-800 capitalize font-heading">{categoryName}</h1>
           {!isLoading && (
             <p className="text-xs text-stone-400">{total} items</p>
           )}
@@ -71,7 +71,7 @@ export default function CategoryPage() {
 
       {/* Loading skeleton */}
       {isLoading && (
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-3 sm:grid-cols-4 gap-2.5">
           {Array.from({ length: 8 }).map((_, i) => (
             <SkeletonLoader key={i} variant="card" count={1} />
           ))}
@@ -80,7 +80,7 @@ export default function CategoryPage() {
 
       {/* Product grid */}
       {!isLoading && products.length > 0 && (
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-3 sm:grid-cols-4 gap-2.5">
           {products.map((product) => (
             <ProductCard key={product.name_lower} product={product} variant="grid" />
           ))}

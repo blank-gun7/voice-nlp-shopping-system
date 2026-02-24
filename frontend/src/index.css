@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-heading: "Poppins", "Inter", system-ui, sans-serif;
+}
+
 /* ── Design tokens ─────────────────────────────────────────────────────── */
 :root {
   /* Brand green */
@@ -43,7 +48,7 @@ html, body, #root {
 body {
   background-color: var(--surface-100);
   color: var(--surface-900);
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: var(--font-sans);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

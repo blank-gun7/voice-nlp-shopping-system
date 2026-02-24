@@ -100,6 +100,7 @@ async def product_related(name: str, request: Request) -> RelatedResponse:
 def store_search(
     q: str = Query(..., min_length=1, description="Search query"),
     limit: int = Query(default=20, ge=1, le=100),
+    price_max: Optional[float] = Query(default=None, ge=0, description="Maximum price filter"),
 ) -> SearchResponse:
     """Search the item catalog by name (case-insensitive substring match)."""
     from backend.recommendations._catalog import CATALOG
@@ -109,6 +110,10 @@ def store_search(
         p for key, p in CATALOG.items()
         if query in key
     ]
+
+    if price_max is not None:
+        matches = [p for p in matches if (p.get("avg_price") or 0) <= price_max]
+
     matches.sort(key=lambda p: (
         # Exact match first, then starts-with, then contains
         0 if p["name_lower"] == query else

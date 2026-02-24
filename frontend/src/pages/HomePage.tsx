@@ -20,7 +20,7 @@ export default function HomePage() {
 
       {/* Seasonal picks */}
       <section>
-        <SectionHeader title="🌿 Seasonal Picks" />
+        <SectionHeader title="Seasonal Picks" />
         {isLoading ? (
           <SkeletonLoader variant="card" count={4} />
         ) : (
@@ -30,7 +30,7 @@ export default function HomePage() {
 
       {/* Popular this week */}
       <section>
-        <SectionHeader title="🔥 Popular This Week" />
+        <SectionHeader title="Popular This Week" />
         {isLoading ? (
           <SkeletonLoader variant="card" count={4} />
         ) : (
@@ -41,7 +41,7 @@ export default function HomePage() {
       {/* Your Usuals — derived from local purchase history */}
       {usualItems.length > 0 && (
         <section>
-          <SectionHeader title="⭐ Your Usuals" />
+          <SectionHeader title="Your Usuals" />
           <div className="flex flex-wrap gap-2">
             {usualItems.map((name) => (
               <ChipButton
@@ -59,7 +59,7 @@ export default function HomePage() {
       {/* Reorder suggestions */}
       {(homeData?.reorder?.length ?? 0) > 0 && (
         <section>
-          <SectionHeader title="🔁 Buy Again" />
+          <SectionHeader title="Buy Again" />
           <div className="flex flex-wrap gap-2">
             {homeData!.reorder.map((item) => (
               <ChipButton
@@ -78,9 +78,9 @@ export default function HomePage() {
       <section>
         <SectionHeader title="Shop by Category" />
         {isLoading ? (
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-3 sm:grid-cols-4 gap-2.5">
             {Array.from({ length: 9 }).map((_, i) => (
-              <div key={i} className="aspect-square bg-stone-200 rounded-2xl animate-pulse" />
+              <div key={i} className="aspect-square bg-stone-200 rounded-xl animate-pulse" />
             ))}
           </div>
         ) : (

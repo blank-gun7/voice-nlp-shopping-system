@@ -154,3 +154,31 @@ class SearchResponse(BaseModel):
 class RelatedResponse(BaseModel):
     co_purchase: list[str]
     substitutes: list[str]
+
+
+# ── Order schemas ─────────────────────────────────────────────────────────────
+
+class PlaceOrderRequest(BaseModel):
+    list_id: int
+
+
+class OrderItemOut(BaseModel):
+    item_name: str
+    quantity: float
+    unit: str
+    category: str
+
+    class Config:
+        from_attributes = True
+
+
+class OrderOut(BaseModel):
+    order_id: str
+    purchased_at: str
+    item_count: int
+    items: list[OrderItemOut]
+
+
+class OrderHistoryResponse(BaseModel):
+    orders: list[OrderOut]
+    total: int

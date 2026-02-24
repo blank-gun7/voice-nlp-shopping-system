@@ -14,6 +14,7 @@ from backend.models.schemas import (
     ParsedCommand,
     ProcessRequest,
     Suggestions,
+    SuggestionItem,
     TranscribeResponse,
     VoiceCommandResponse,
 )
@@ -180,6 +181,23 @@ async def voice_command(
             latency["recommendations"] = round(time.perf_counter() - t3, 3)
         except Exception as exc:
             logger.warning("Recommendations failed (non-fatal): %s", exc)
+
+    # For search_item intent, ensure catalog_matches are populated
+    if parsed.intent == "search_item" and parsed.item:
+        from backend.recommendations.engine import RecommendationEngine
+
+        extra = RecommendationEngine._catalog_search(parsed.item, top_k=8)
+        if suggestions is None:
+            suggestions = Suggestions(
+                catalog_matches=[SuggestionItem(name=n, reason="Search result") for n in extra],
+            )
+        else:
+            existing = {s.name.lower() for s in (suggestions.catalog_matches or [])}
+            for name in extra:
+                if name.lower() not in existing:
+                    suggestions.catalog_matches.append(
+                        SuggestionItem(name=name, reason="Search result")
+                    )
 
     latency["total"] = sum(v for k, v in latency.items() if k != "total")
 

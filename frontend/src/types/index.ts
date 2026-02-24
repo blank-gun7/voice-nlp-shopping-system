@@ -138,6 +138,27 @@ export interface Toast {
   type: "success" | "error" | "info";
 }
 
+// ── Order types ──────────────────────────────────────────────────────────────
+
+export interface OrderItem {
+  item_name: string;
+  quantity: number;
+  unit: string;
+  category: string;
+}
+
+export interface Order {
+  order_id: string;
+  purchased_at: string;
+  item_count: number;
+  items: OrderItem[];
+}
+
+export interface OrderHistoryResponse {
+  orders: Order[];
+  total: number;
+}
+
 // ── API types ─────────────────────────────────────────────────────────────────
 
 export interface CategoryPageResponse {

@@ -6,6 +6,8 @@ import { getStoredListId } from "../hooks/useVoiceAssistant";
 import { api } from "../services/api";
 import { recordPurchase } from "../services/preferences";
 import ShoppingList from "../components/list/ShoppingList";
+import PastOrders from "../components/list/PastOrders";
+import ChipButton from "../components/shared/ChipButton";
 
 export default function MyListPage() {
   useShoppingList();
@@ -14,6 +16,7 @@ export default function MyListPage() {
   const { currentList } = state;
   const [showConfirm, setShowConfirm] = useState(false);
   const [isPlacing, setIsPlacing] = useState(false);
+  const [activeTab, setActiveTab] = useState<"list" | "orders">("list");
 
   const totalItems = currentList?.total_items ?? 0;
   const checkedItems = currentList?.checked_items ?? 0;
@@ -29,12 +32,12 @@ export default function MyListPage() {
       return;
     }
 
-    // Record preferences before clearing
+    // Record preferences to localStorage
     recordPurchase(allItems);
 
     try {
-      // Clear all items in one API call
-      await api.clearList(listId);
+      // Place order: records to PurchaseHistory + clears list
+      await api.placeOrder(listId);
 
       // Refresh list to reflect empty state
       const updated = await api.getList(listId);
@@ -42,8 +45,11 @@ export default function MyListPage() {
 
       dispatch({
         type: "SET_TOAST",
-        payload: { message: "Order placed! Your list is on its way 🎉", type: "success" },
+        payload: { message: "Order placed successfully!", type: "success" },
       });
+
+      // Switch to orders tab to show the new order
+      setActiveTab("orders");
     } catch {
       dispatch({
         type: "SET_TOAST",
@@ -61,46 +67,62 @@ export default function MyListPage() {
       <div className="px-4 pt-5 pb-3">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-xl font-bold text-stone-800">My List</h1>
-            {totalItems > 0 && (
+            <h1 className="text-xl font-bold text-stone-800 font-heading">My List</h1>
+            {activeTab === "list" && totalItems > 0 && (
               <p className="text-xs text-stone-400 mt-0.5">
                 {totalItems - checkedItems} items remaining
               </p>
             )}
           </div>
 
-          {/* Voice add button */}
-          <button
-            onClick={startVoice}
-            className="flex items-center gap-1.5 px-4 py-2 bg-green-500 text-white text-sm font-semibold rounded-xl hover:bg-green-600 transition-colors"
-          >
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              viewBox="0 0 24 24"
+          {/* Voice add button — only on list tab */}
+          {activeTab === "list" && (
+            <button
+              onClick={startVoice}
+              className="flex items-center gap-1.5 px-4 py-2 bg-green-500 text-white text-sm font-semibold rounded-xl hover:bg-green-600 transition-colors"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M19 10v1a7 7 0 01-14 0v-1M12 19v4M8 23h8"
-              />
-            </svg>
-            Voice Add
-          </button>
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 10v1a7 7 0 01-14 0v-1M12 19v4M8 23h8"
+                />
+              </svg>
+              Voice Add
+            </button>
+          )}
+        </div>
+
+        {/* Tab bar */}
+        <div className="flex gap-2 mt-4">
+          <ChipButton
+            label="Shopping List"
+            active={activeTab === "list"}
+            onClick={() => setActiveTab("list")}
+          />
+          <ChipButton
+            label="Past Orders"
+            active={activeTab === "orders"}
+            onClick={() => setActiveTab("orders")}
+          />
         </div>
       </div>
 
-      <ShoppingList />
+      {activeTab === "list" ? <ShoppingList /> : <PastOrders />}
 
-      {/* Sticky Place Order footer */}
-      {totalItems > 0 && (
+      {/* Sticky Place Order footer — only on list tab */}
+      {activeTab === "list" && totalItems > 0 && (
         <div className="fixed bottom-[var(--bottom-nav-height)] left-0 right-0 px-4 pb-3 pt-2 bg-gradient-to-t from-stone-100 via-stone-100 to-transparent z-20">
           <button
             onClick={() => setShowConfirm(true)}
@@ -116,7 +138,7 @@ export default function MyListPage() {
         <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 backdrop-blur-sm">
           <div className="w-full bg-white rounded-t-3xl px-6 pt-6 pb-10 shadow-2xl">
             <div className="w-10 h-1 bg-stone-200 rounded-full mx-auto mb-5" />
-            <h2 className="text-lg font-bold text-stone-800 mb-1 text-center">
+            <h2 className="text-lg font-bold text-stone-800 mb-1 text-center font-heading">
               Confirm Order
             </h2>
             <p className="text-sm text-stone-500 text-center mb-6">

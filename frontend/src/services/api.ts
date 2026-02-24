@@ -2,9 +2,11 @@
 // Components must never call fetch() directly.
 
 import type {
+  ActionResult,
   CategoryPageResponse,
   HomePageData,
   ListItem,
+  OrderHistoryResponse,
   RelatedResponse,
   SearchResponse,
   ShoppingList,
@@ -165,6 +167,28 @@ export const api = {
     await request<unknown>(`/api/lists/${listId}/items`, {
       method: "DELETE",
     });
+  },
+
+  // ── Orders ─────────────────────────────────────────────────────────────────
+
+  /**
+   * POST /api/orders/place
+   * Record all items from the list to PurchaseHistory and clear the list.
+   */
+  async placeOrder(listId: number): Promise<ActionResult> {
+    return request<ActionResult>("/api/orders/place", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ list_id: listId }),
+    });
+  },
+
+  /**
+   * GET /api/orders/history
+   * Return all past orders grouped by date.
+   */
+  async getOrderHistory(): Promise<OrderHistoryResponse> {
+    return request<OrderHistoryResponse>("/api/orders/history");
   },
 
   // ── Store / Marketplace ─────────────────────────────────────────────────────

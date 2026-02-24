@@ -8,7 +8,7 @@ interface SectionHeaderProps {
 export default function SectionHeader({ title, seeAllHref }: SectionHeaderProps) {
   return (
     <div className="flex items-center justify-between mb-3">
-      <h2 className="text-base font-bold text-stone-800">{title}</h2>
+      <h2 className="text-base font-bold text-stone-800 font-heading tracking-tight">{title}</h2>
       {seeAllHref && (
         <Link
           to={seeAllHref}

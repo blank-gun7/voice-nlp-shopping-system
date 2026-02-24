@@ -7,7 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from backend.config import settings
 from backend.models.database import init_db
-from backend.api.routes import health, voice, lists, store
+from backend.api.routes import health, voice, lists, store, orders
 
 logging.basicConfig(
     level=logging.DEBUG if settings.DEBUG else logging.INFO,
@@ -93,3 +93,4 @@ app.include_router(health.router)
 app.include_router(voice.router)
 app.include_router(lists.router)
 app.include_router(store.router)
+app.include_router(orders.router)

@@ -131,21 +131,22 @@ export default function ProductCard({ product, variant = "compact" }: ProductCar
     return (
       <div
         onClick={handleTap}
-        className="bg-white rounded-2xl p-3 shadow-sm hover:shadow-md transition-shadow cursor-pointer active:scale-95"
+        className="bg-white rounded-xl p-2.5 shadow-sm hover:shadow-md transition-shadow cursor-pointer active:scale-[0.97]"
       >
-        <div className={`w-full aspect-square ${visual.bg} rounded-xl flex items-center justify-center mb-2 text-3xl`}>
+        <div className={`w-full h-20 ${visual.bg} rounded-lg flex items-center justify-center mb-2 text-2xl`}>
           {visual.emoji}
         </div>
-        <p className="text-sm font-semibold text-stone-800 line-clamp-2 mb-1 capitalize">
+        <p className="text-xs font-semibold text-stone-800 line-clamp-2 capitalize leading-tight mb-1">
           {product.name}
         </p>
-        <CategoryBadge category={product.category} className="mb-2" />
-        {product.avg_price && (
-          <p className="text-xs text-stone-500">${product.avg_price.toFixed(2)}</p>
+        {product.avg_price ? (
+          <p className="text-xs font-medium text-green-600">${product.avg_price.toFixed(2)}</p>
+        ) : (
+          <CategoryBadge category={product.category} />
         )}
         <button
           onClick={handleAdd}
-          className="mt-2 w-full py-1.5 bg-green-500 text-white text-xs font-semibold rounded-lg hover:bg-green-600 transition-colors"
+          className="mt-1.5 w-full py-1.5 bg-green-500 text-white text-[11px] font-semibold rounded-lg hover:bg-green-600 transition-colors"
         >
           + Add
         </button>
