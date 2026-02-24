@@ -26,6 +26,11 @@ class Settings(BaseSettings):
     # Data artifacts directory
     DATA_DIR: str = "./data"
 
+    # Catalog validation thresholds
+    CATALOG_FUZZY_THRESHOLD: float = 0.70
+    CATALOG_AUTO_CORRECT_THRESHOLD: float = 0.80
+    CATALOG_MAX_SUGGESTIONS: int = 5
+
     # CORS — allow Vite dev server and production frontend
     CORS_ORIGINS: list[str] = ["http://localhost:5173"]
 

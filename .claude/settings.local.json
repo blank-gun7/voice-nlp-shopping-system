@@ -6,7 +6,9 @@
       "Bash(cd \"/Users/ranaraunitrazsingh/Desktop/Placements Assignments/Unthinkable solutions/voice-shopping-assistant\" && python -c \"\nimport sys\nsys.path.insert\\(0, '.'\\)\nfrom backend.main import app\nprint\\('FastAPI app loaded OK'\\)\nprint\\('Routes:'\\)\nfor route in app.routes:\n    if hasattr\\(route, 'methods'\\):\n        print\\(f'  {list\\(route.methods\\)} {route.path}'\\)\n\" 2>&1)",
       "Bash(tail:*)",
       "Bash(grep:*)",
-      "Bash(head:*)"
+      "Bash(head:*)",
+      "Bash(docker exec:*)",
+      "WebSearch"
     ]
   }
 }

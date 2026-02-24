@@ -18,6 +18,7 @@ from backend.models.schemas import (
     TranscribeResponse,
     VoiceCommandResponse,
 )
+from backend.services.catalog_validator import validate_item
 
 router = APIRouter(prefix="/api/voice", tags=["voice"])
 logger = logging.getLogger(__name__)
@@ -128,10 +129,10 @@ async def voice_command(
     latency: dict[str, float] = {}
     mime_type: str = file.content_type or "audio/webm"
 
-    # Stage 1: STT
+    # Stage 1: STT (translate — auto-detects language, always outputs English)
     t0 = time.perf_counter()
     try:
-        stt_result = await stt.transcribe(audio_bytes, mime_type)
+        stt_result = await stt.translate(audio_bytes, mime_type)
     except Exception as exc:
         logger.exception("STT failed in voice command")
         raise HTTPException(status_code=500, detail=f"Transcription failed: {exc}") from exc
@@ -155,6 +156,73 @@ async def voice_command(
         latency[f"nlp_{k}"] = v
 
     parsed = ParsedCommand(**parsed_dict)
+
+    # Stage 2.5: Catalog validation (add_item intent only)
+    if parsed.intent == "add_item":
+        if not parsed.item:
+            # NLP returned null item (gibberish/unclear input)
+            action_result = ActionResult(
+                status="no_change",
+                message="I couldn't understand that clearly. Please try again.",
+            )
+            updated_list = None
+            # Build list for response
+            db_session = None
+            try:
+                from backend.models.database import SessionLocal
+                db_session = SessionLocal()
+                from backend.services.list_manager import _build_list_out
+                updated_list = _build_list_out(db_session, list_id)
+            finally:
+                if db_session:
+                    db_session.close()
+
+            latency["total"] = sum(v for k, v in latency.items() if k != "total")
+            return VoiceCommandResponse(
+                transcript=transcript,
+                parsed=parsed,
+                action_result=action_result,
+                updated_list=updated_list,
+                suggestions=None,
+                latency=latency,
+            )
+
+        validation = validate_item(parsed.item)
+        if not validation.is_valid:
+            # Item not found in catalog — reject with suggestions
+            suggestion_chips = [
+                SuggestionItem(name=s, reason="Did you mean?")
+                for s in validation.suggestions
+            ]
+            action_result = ActionResult(
+                status="no_change",
+                message=f"I couldn't find '{parsed.item}' in our catalog. Did you mean one of these?",
+            )
+            db_session = None
+            try:
+                from backend.models.database import SessionLocal
+                db_session = SessionLocal()
+                from backend.services.list_manager import _build_list_out
+                updated_list = _build_list_out(db_session, list_id)
+            finally:
+                if db_session:
+                    db_session.close()
+
+            latency["total"] = sum(v for k, v in latency.items() if k != "total")
+            return VoiceCommandResponse(
+                transcript=transcript,
+                parsed=parsed,
+                action_result=action_result,
+                updated_list=updated_list,
+                suggestions=Suggestions(catalog_matches=suggestion_chips) if suggestion_chips else None,
+                latency=latency,
+            )
+
+        # Auto-correct to canonical catalog name if fuzzy/substring matched
+        if validation.matched_name and validation.matched_name.lower() != parsed.item.lower():
+            logger.info("Auto-corrected item: %r → %r", parsed.item, validation.matched_name)
+            parsed_dict["item"] = validation.matched_name
+            parsed = ParsedCommand(**parsed_dict)
 
     # Stage 3: Execute list action
     t2 = time.perf_counter()

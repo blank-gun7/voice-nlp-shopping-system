@@ -147,7 +147,14 @@ class SpacyParser:
         return "add_item"
 
     def _extract_item(self, doc, text: str) -> Optional[str]:
-        """Extract item name via PhraseMatcher first, then noun chunks."""
+        """Extract item name via PhraseMatcher first, then noun chunks.
+
+        Heuristics for noisy transcripts:
+        - Reject single-character chunks and known stop/filler words.
+        - Prefer the FIRST meaningful noun chunk (closest to intent keyword)
+          over the last, since noisy transcripts often have garbage at the end.
+        - Strip leading articles/numbers from chunks.
+        """
         matches = self.matcher(doc)
         if matches:
             # Return the longest match
@@ -155,15 +162,29 @@ class SpacyParser:
             _, start, end = longest
             return doc[start:end].text
 
-        # Fallback: use noun chunks, skip quantity/unit tokens
-        stop_words = {"list", "all", "everything", "me", "my", "the", "some", "any"}
-        chunks = [
-            chunk.text for chunk in doc.noun_chunks
-            if chunk.text.lower() not in stop_words
-            and chunk.text.lower() not in UNIT_KEYWORDS
-        ]
+        # Fallback: use noun chunks, skip quantity/unit/noise tokens
+        stop_words = {
+            "list", "all", "everything", "me", "my", "the", "some", "any",
+            "i", "it", "you", "we", "he", "she", "they", "us",
+            "that", "this", "thing", "things", "stuff", "way",
+            "day", "time", "sorry", "lot", "bit", "something", "nothing",
+        }
+        chunks: list[str] = []
+        for chunk in doc.noun_chunks:
+            text_lower = chunk.text.lower().strip()
+            # Reject if it's a stop word, unit, or too short
+            if text_lower in stop_words or text_lower in UNIT_KEYWORDS:
+                continue
+            if len(text_lower) < 2:
+                continue
+            # Strip leading article from chunk: "a pizza" → "pizza"
+            cleaned = re.sub(r"^(?:a|an|the|some|my|1|2|3)\s+", "", text_lower).strip()
+            if cleaned and cleaned not in stop_words and len(cleaned) >= 2:
+                chunks.append(cleaned)
+
         if chunks:
-            return chunks[-1]  # last noun chunk usually is the item
+            # Prefer the first meaningful chunk (closest to the verb/intent)
+            return chunks[0]
 
         # Last resort: extract nouns that aren't stop/unit words
         nouns = [
@@ -172,8 +193,9 @@ class SpacyParser:
             and token.text.lower() not in stop_words
             and token.text.lower() not in UNIT_KEYWORDS
             and not token.is_stop
+            and len(token.text) >= 2
         ]
-        return nouns[-1] if nouns else None
+        return nouns[0] if nouns else None
 
     def _extract_quantity(self, doc, text: str) -> Optional[float]:
         """Extract quantity from the doc (NUM tokens or digit strings)."""

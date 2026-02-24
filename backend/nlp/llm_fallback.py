@@ -20,6 +20,11 @@ Given a shopping voice command, extract structured information and return ONLY v
 
 Supported intents: add_item, remove_item, modify_item, check_item, search_item, list_items, clear_list, get_suggestions
 
+IMPORTANT:
+- If the input text is gibberish, unclear, or you cannot identify a specific grocery/household item, set "item" to null.
+- Only return item names that are real grocery or household products.
+- Do NOT guess or fabricate item names from unclear input.
+
 JSON schema (all fields required, use null if not found):
 {
   "intent": "<intent>",
@@ -35,7 +40,8 @@ Examples:
 "add 2 bananas" → {"intent":"add_item","item":"bananas","quantity":2,"unit":null,"category":"produce","brand":null,"price_max":null}
 "remove milk from my list" → {"intent":"remove_item","item":"milk","quantity":null,"unit":null,"category":null,"brand":null,"price_max":null}
 "show my list" → {"intent":"list_items","item":null,"quantity":null,"unit":null,"category":null,"brand":null,"price_max":null}
-"clear my list" → {"intent":"clear_list","item":null,"quantity":null,"unit":null,"category":null,"brand":null,"price_max":null}"""
+"clear my list" → {"intent":"clear_list","item":null,"quantity":null,"unit":null,"category":null,"brand":null,"price_max":null}
+"something unclear garbage" → {"intent":"add_item","item":null,"quantity":null,"unit":null,"category":null,"brand":null,"price_max":null}"""
 
 
 class LLMFallback:

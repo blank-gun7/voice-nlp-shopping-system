@@ -91,11 +91,16 @@ class SuggestionItem(BaseModel):
     reason: Optional[str] = None
 
 
+class ReorderItem(BaseModel):
+    name: str
+    reason: str
+
+
 class Suggestions(BaseModel):
     co_purchase: list[SuggestionItem] = []
     substitutes: list[SuggestionItem] = []
     seasonal: list[SuggestionItem] = []
-    reorder: list[dict] = []
+    reorder: list[ReorderItem] = []
     catalog_matches: list[SuggestionItem] = []
 
 
@@ -118,11 +123,6 @@ class ProductOut(BaseModel):
     avg_price: Optional[float] = None
     is_seasonal: bool = False
     order_count: int = 0
-
-
-class ReorderItem(BaseModel):
-    name: str
-    reason: str
 
 
 class CategoryMeta(BaseModel):

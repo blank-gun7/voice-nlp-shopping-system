@@ -184,8 +184,22 @@ class ListManager:
     ) -> ActionResult:
         if not parsed.item:
             return ActionResult(status="error", message="No item found in command")
+
+        # Defense-in-depth: validate voice-added items against catalog
+        from backend.services.catalog_validator import validate_item
+        validation = validate_item(parsed.item)
+        if not validation.is_valid:
+            logger.warning("ListManager rejected uncatalogued voice item: %r", parsed.item)
+            return ActionResult(
+                status="no_change",
+                message=f"I couldn't find '{parsed.item}' in our catalog.",
+            )
+
+        # Use canonical catalog name if auto-corrected
+        item_name = validation.matched_name or parsed.item
+
         req = AddItemRequest(
-            item_name=parsed.item,
+            item_name=item_name,
             quantity=parsed.quantity or 1.0,
             unit=parsed.unit or "pieces",
             category=parsed.category,

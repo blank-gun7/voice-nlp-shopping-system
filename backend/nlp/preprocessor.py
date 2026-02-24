@@ -45,16 +45,39 @@ _PREFIX_PATTERN = re.compile(
 _WHITESPACE_RE = re.compile(r"\s+")
 
 
+_UNIT_WORDS: set[str] = {
+    "kg", "kilogram", "kilograms", "gram", "grams", "lb", "lbs",
+    "pound", "pounds", "oz", "ounce", "ounces", "liter", "liters",
+    "litre", "litres", "ml", "piece", "pieces", "pack", "packs",
+    "packet", "packets", "bag", "bags", "box", "boxes", "can", "cans",
+    "bottle", "bottles", "bunch", "bunches", "dozen", "loaf", "loaves",
+    "jar", "jars", "carton", "cartons", "roll", "rolls", "cup", "cups",
+    "slice", "slices", "tray", "trays",
+}
+
+
 def _replace_number_words(text: str) -> str:
-    """Replace standalone number words with their digit representation."""
+    """Replace standalone number words with their digit representation.
+
+    Special handling: "a" and "an" are only converted to "1" when followed
+    by a unit word (e.g. "a dozen eggs" → "1 dozen eggs") to avoid
+    destroying articles ("add a pizza" should stay as-is).
+    """
     tokens = text.split()
     result: list[str] = []
-    for token in tokens:
+    for i, token in enumerate(tokens):
         clean = token.strip(".,!?")
         if clean in NUMBER_WORDS:
-            num = NUMBER_WORDS[clean]
-            # Format as int if whole number
-            result.append(str(int(num)) if num == int(num) else str(num))
+            # "a" / "an" — only convert when next token is a unit word
+            if clean in ("a", "an"):
+                next_token = tokens[i + 1].strip(".,!?").lower() if i + 1 < len(tokens) else ""
+                if next_token in _UNIT_WORDS or next_token in NUMBER_WORDS:
+                    result.append("1")
+                else:
+                    result.append(token)  # keep as article
+            else:
+                num = NUMBER_WORDS[clean]
+                result.append(str(int(num)) if num == int(num) else str(num))
         else:
             result.append(token)
     return " ".join(result)

@@ -96,7 +96,12 @@ export function useVoiceAssistant(): UseVoiceAssistantReturn {
         type: "SET_TOAST",
         payload: {
           message: result.action_result.message ?? "Done!",
-          type: result.action_result.status === "error" ? "error" : "success",
+          type:
+            result.action_result.status === "error"
+              ? "error"
+              : result.action_result.status === "no_change"
+              ? "info"
+              : "success",
         },
       });
     } catch {

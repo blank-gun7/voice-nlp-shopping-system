@@ -40,6 +40,8 @@ export default function TranscriptDisplay() {
           className={`text-sm font-semibold ${
             voiceResult.action_result.status === "success"
               ? "text-green-600"
+              : voiceResult.action_result.status === "no_change"
+              ? "text-amber-600"
               : "text-stone-500"
           }`}
         >
@@ -47,7 +49,11 @@ export default function TranscriptDisplay() {
         </p>
         {catalogMatches.length > 0 && (
           <div className="pt-3 space-y-1.5">
-            <p className="text-stone-400 text-xs">Did you also mean?</p>
+            <p className="text-stone-400 text-xs">
+              {voiceResult.action_result.status === "no_change"
+                ? "Did you mean one of these?"
+                : "Did you also mean?"}
+            </p>
             <div className="flex flex-wrap justify-center gap-2">
               {catalogMatches.slice(0, 6).map((item) => (
                 <button

@@ -35,7 +35,7 @@ class GroqSTTService:
         logger.info("GroqSTTService ready (model=%s)", settings.GROQ_STT_MODEL)
 
     def _transcribe_sync(self, audio_bytes: bytes, filename: str, mime_type: str) -> dict:
-        """Blocking Groq API call — runs inside a thread pool."""
+        """Blocking Groq transcriptions call — preserves original language."""
         transcription = self._client.audio.transcriptions.create(
             file=(filename, audio_bytes, mime_type),
             model=settings.GROQ_STT_MODEL,
@@ -46,24 +46,34 @@ class GroqSTTService:
         return {
             "transcript": transcript,
             "language": language,
-            # Groq does not expose per-word confidence; we return 1.0 as a sentinel
+            "confidence": 1.0,
+        }
+
+    def _translate_sync(self, audio_bytes: bytes, filename: str, mime_type: str) -> dict:
+        """Blocking Groq translations call — auto-detects language and outputs English."""
+        translation = self._client.audio.translations.create(
+            file=(filename, audio_bytes, mime_type),
+            model=settings.GROQ_STT_MODEL,
+            response_format="json",
+        )
+        transcript: str = (translation.text or "").strip()
+        return {
+            "transcript": transcript,
+            "language": "en",  # translations always outputs English
             "confidence": 1.0,
         }
 
     async def transcribe(self, audio_bytes: bytes, mime_type: str = "audio/webm") -> dict:
-        """Transcribe audio bytes with Groq Whisper.
+        """Transcribe audio bytes with Groq Whisper (raw transcription, no translation).
+
+        Used by the ``/api/voice/transcribe`` endpoint for debugging.
 
         Args:
             audio_bytes: Raw audio bytes (webm/opus from MediaRecorder API).
-            mime_type: MIME type reported by the browser (e.g. ``audio/webm``).
+            mime_type: MIME type reported by the browser.
 
         Returns:
-            Dict with keys ``transcript`` (str), ``language`` (str),
-            ``confidence`` (float).
-
-        Raises:
-            ValueError: If ``audio_bytes`` is empty.
-            Exception: Propagates Groq API errors to the caller.
+            Dict with keys ``transcript``, ``language``, ``confidence``.
         """
         if not audio_bytes:
             raise ValueError("Empty audio — nothing to transcribe")
@@ -71,7 +81,7 @@ class GroqSTTService:
         ext = _MIME_TO_EXT.get(mime_type, "webm")
         filename = f"recording.{ext}"
 
-        logger.debug("Sending %d bytes (%s) to Groq Whisper", len(audio_bytes), mime_type)
+        logger.debug("Sending %d bytes (%s) to Groq Whisper (transcribe)", len(audio_bytes), mime_type)
 
         loop = asyncio.get_event_loop()
         result: dict = await loop.run_in_executor(
@@ -81,3 +91,45 @@ class GroqSTTService:
 
         logger.info("Transcribed: %r (lang=%s)", result["transcript"], result["language"])
         return result
+
+    async def translate(self, audio_bytes: bytes, mime_type: str = "audio/webm") -> dict:
+        """Translate audio to English via Groq Whisper translations endpoint.
+
+        Auto-detects source language (Hindi, Urdu, etc.) and always outputs
+        English text. If the input is already English, it transcribes normally.
+        Falls back to transcriptions if translations fails.
+
+        Args:
+            audio_bytes: Raw audio bytes (webm/opus from MediaRecorder API).
+            mime_type: MIME type reported by the browser.
+
+        Returns:
+            Dict with keys ``transcript``, ``language``, ``confidence``.
+        """
+        if not audio_bytes:
+            raise ValueError("Empty audio — nothing to translate")
+
+        ext = _MIME_TO_EXT.get(mime_type, "webm")
+        filename = f"recording.{ext}"
+
+        logger.debug("Sending %d bytes (%s) to Groq Whisper (translate)", len(audio_bytes), mime_type)
+
+        loop = asyncio.get_event_loop()
+        try:
+            result: dict = await loop.run_in_executor(
+                None,
+                partial(self._translate_sync, audio_bytes, filename, mime_type),
+            )
+            logger.info("Translated: %r (lang=%s)", result["transcript"], result["language"])
+            return result
+        except Exception as exc:
+            logger.warning("Translation failed, falling back to transcription: %s", exc)
+            # Create a fresh client — the previous failure may have corrupted
+            # the shared HTTP connection pool (SSL state, etc.)
+            self._client = Groq(api_key=settings.GROQ_API_KEY)
+            result = await loop.run_in_executor(
+                None,
+                partial(self._transcribe_sync, audio_bytes, filename, mime_type),
+            )
+            logger.info("Fallback transcribed: %r (lang=%s)", result["transcript"], result["language"])
+            return result
