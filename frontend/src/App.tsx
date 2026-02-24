@@ -1,20 +1,100 @@
-// Phase 6 will replace this with the full marketplace router.
-// For now it verifies the dev server starts cleanly.
+import { createContext, useContext, useReducer } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import type { AppAction, AppState } from "./types";
+import Layout from "./components/layout/Layout";
+import HomePage from "./pages/HomePage";
+import CategoryPage from "./pages/CategoryPage";
+import MyListPage from "./pages/MyListPage";
 
-function App() {
-  return (
-    <div className="flex items-center justify-center min-h-screen bg-stone-100">
-      <div className="text-center p-8 bg-white rounded-2xl shadow-sm">
-        <div className="text-4xl mb-4">🛒</div>
-        <h1 className="text-2xl font-bold text-stone-800 mb-2">
-          Voice Shopping Assistant
-        </h1>
-        <p className="text-stone-500 text-sm">
-          Phase 0 scaffold — backend + frontend running.
-        </p>
-      </div>
-    </div>
-  )
+// ── Initial state ─────────────────────────────────────────────────────────────
+
+const initialState: AppState = {
+  voiceState: "idle",
+  interimTranscript: "",
+  voiceResult: null,
+  isVoiceOverlayOpen: false,
+
+  currentList: null,
+  isListLoading: false,
+
+  homeData: null,
+  isHomeLoading: false,
+
+  selectedProduct: null,
+  productSuggestions: null,
+  isProductSheetOpen: false,
+
+  language: "en-US",
+  ttsEnabled: true,
+  toast: null,
+};
+
+// ── Reducer ───────────────────────────────────────────────────────────────────
+
+function appReducer(state: AppState, action: AppAction): AppState {
+  switch (action.type) {
+    case "SET_VOICE_STATE":
+      return { ...state, voiceState: action.payload };
+    case "SET_INTERIM_TRANSCRIPT":
+      return { ...state, interimTranscript: action.payload };
+    case "SET_VOICE_RESULT":
+      return { ...state, voiceResult: action.payload };
+    case "SET_VOICE_OVERLAY":
+      return { ...state, isVoiceOverlayOpen: action.payload };
+    case "SET_LIST":
+      return { ...state, currentList: action.payload };
+    case "SET_LIST_LOADING":
+      return { ...state, isListLoading: action.payload };
+    case "SET_HOME_DATA":
+      return { ...state, homeData: action.payload };
+    case "SET_HOME_LOADING":
+      return { ...state, isHomeLoading: action.payload };
+    case "SET_SELECTED_PRODUCT":
+      return { ...state, selectedProduct: action.payload };
+    case "SET_PRODUCT_SUGGESTIONS":
+      return { ...state, productSuggestions: action.payload };
+    case "SET_PRODUCT_SHEET":
+      return { ...state, isProductSheetOpen: action.payload };
+    case "SET_LANGUAGE":
+      return { ...state, language: action.payload };
+    case "SET_TTS_ENABLED":
+      return { ...state, ttsEnabled: action.payload };
+    case "SET_TOAST":
+      return { ...state, toast: action.payload };
+    default:
+      return state;
+  }
 }
 
-export default App
+// ── Context ───────────────────────────────────────────────────────────────────
+
+export const AppContext = createContext<{
+  state: AppState;
+  dispatch: React.Dispatch<AppAction>;
+} | null>(null);
+
+export function useAppContext() {
+  const ctx = useContext(AppContext);
+  if (!ctx) throw new Error("useAppContext must be used within AppContext.Provider");
+  return ctx;
+}
+
+// ── App ───────────────────────────────────────────────────────────────────────
+
+export default function App() {
+  const [state, dispatch] = useReducer(appReducer, initialState);
+
+  return (
+    <AppContext.Provider value={{ state, dispatch }}>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/category/:name" element={<CategoryPage />} />
+            <Route path="/list" element={<MyListPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </AppContext.Provider>
+  );
+}

@@ -1,28 +1,40 @@
-version: "3.9"
-
 services:
   backend:
     build: ./backend
     ports:
       - "8000:8000"
     volumes:
+      # Live-reload: mount source but keep Python packages in the image
       - ./backend:/app/backend
+      - ./backend/data:/app/data
     env_file:
       - .env
     environment:
-      - DATABASE_URL=sqlite:///./shopping.db
-      - DATA_DIR=./data
+      - DATABASE_URL=sqlite:////app/shopping.db
+      - DATA_DIR=/app/data
+      # Allow requests from both the Vite dev server and Nginx in prod
+      - CORS_ORIGINS=["http://localhost:5173","http://frontend:5173"]
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
 
   frontend:
     build: ./frontend
     ports:
       - "5173:5173"
     volumes:
+      # Hot reload: mount source; keep node_modules from image layer
       - ./frontend:/app
       - /app/node_modules
     environment:
+      # Inside Docker the frontend browser JS still runs on the HOST machine,
+      # so localhost:8000 is correct (the host forwards port 8000 → backend).
       - VITE_API_URL=http://localhost:8000
     depends_on:
-      - backend
+      backend:
+        condition: service_started
     restart: unless-stopped

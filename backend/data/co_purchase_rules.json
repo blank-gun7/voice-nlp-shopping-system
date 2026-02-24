@@ -1,0 +1,3964 @@
+{
+  "0% greek strained yogurt": [
+    {
+      "item": "Clementines",
+      "confidence": 0.274,
+      "lift": 26.49,
+      "support": 0.0012,
+      "category": "canned_goods"
+    }
+  ],
+  "1% lowfat milk": [
+    {
+      "item": "Banana",
+      "confidence": 0.265,
+      "lift": 1.61,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "100 calorie  per bag popcorn": [
+    {
+      "item": "Banana",
+      "confidence": 0.241,
+      "lift": 1.46,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "100% raw coconut water": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.234,
+      "lift": 1.79,
+      "support": 0.0031,
+      "category": "produce"
+    }
+  ],
+  "100% whole wheat bread": [
+    {
+      "item": "Banana",
+      "confidence": 0.253,
+      "lift": 1.54,
+      "support": 0.0053,
+      "category": "produce"
+    }
+  ],
+  "2% reduced fat dha omega-3 reduced fat milk": [
+    {
+      "item": "Banana",
+      "confidence": 0.268,
+      "lift": 1.63,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "2% reduced fat milk": [
+    {
+      "item": "Banana",
+      "confidence": 0.276,
+      "lift": 1.68,
+      "support": 0.0035,
+      "category": "produce"
+    }
+  ],
+  "2% reduced fat organic milk": [
+    {
+      "item": "Banana",
+      "confidence": 0.28,
+      "lift": 1.7,
+      "support": 0.0016,
+      "category": "produce"
+    }
+  ],
+  "85% lean ground beef": [
+    {
+      "item": "Banana",
+      "confidence": 0.288,
+      "lift": 1.75,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "air chilled organic boneless skinless chicken breasts": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.213,
+      "lift": 1.63,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "almond breeze original almond milk": [
+    {
+      "item": "Banana",
+      "confidence": 0.282,
+      "lift": 1.71,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "apple honeycrisp organic": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.267,
+      "lift": 2.04,
+      "support": 0.0079,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.203,
+      "lift": 1.23,
+      "support": 0.0061,
+      "category": "produce"
+    }
+  ],
+  "apples": [
+    {
+      "item": "Clementines",
+      "confidence": 0.335,
+      "lift": 32.41,
+      "support": 0.0014,
+      "category": "canned_goods"
+    },
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.267,
+      "lift": 2.04,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "asparagus": [
+    {
+      "item": "Banana",
+      "confidence": 0.231,
+      "lift": 1.4,
+      "support": 0.0054,
+      "category": "produce"
+    }
+  ],
+  "asparation/broccolini/baby broccoli": [
+    {
+      "item": "Banana",
+      "confidence": 0.369,
+      "lift": 2.24,
+      "support": 0.0021,
+      "category": "produce"
+    }
+  ],
+  "baby cucumbers": [
+    {
+      "item": "Strawberries",
+      "confidence": 0.226,
+      "lift": 4.59,
+      "support": 0.001,
+      "category": "produce"
+    },
+    {
+      "item": "Hass Avocados",
+      "confidence": 0.221,
+      "lift": 13.06,
+      "support": 0.001,
+      "category": "canned_goods"
+    }
+  ],
+  "baby spinach": [
+    {
+      "item": "Banana",
+      "confidence": 0.22,
+      "lift": 1.34,
+      "support": 0.0018,
+      "category": "produce"
+    }
+  ],
+  "cantaloupe": [
+    {
+      "item": "Banana",
+      "confidence": 0.278,
+      "lift": 1.69,
+      "support": 0.0024,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.236,
+      "lift": 2.59,
+      "support": 0.002,
+      "category": "produce"
+    },
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.211,
+      "lift": 1.62,
+      "support": 0.0018,
+      "category": "produce"
+    }
+  ],
+  "celery hearts": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.256,
+      "lift": 1.96,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "clementines": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.254,
+      "lift": 1.95,
+      "support": 0.0026,
+      "category": "produce"
+    }
+  ],
+  "cream cheese spread": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.255,
+      "lift": 1.95,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "frozen organic wild blueberries": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.281,
+      "lift": 2.15,
+      "support": 0.003,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Whole Strawberries",
+      "confidence": 0.228,
+      "lift": 20.13,
+      "support": 0.0024,
+      "category": "frozen"
+    },
+    {
+      "item": "Organic Baby Spinach",
+      "confidence": 0.222,
+      "lift": 2.65,
+      "support": 0.0024,
+      "category": "produce"
+    }
+  ],
+  "globe eggplant": [
+    {
+      "item": "Organic Zucchini",
+      "confidence": 0.232,
+      "lift": 6.2,
+      "support": 0.0014,
+      "category": "produce"
+    },
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.214,
+      "lift": 1.64,
+      "support": 0.0013,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Baby Spinach",
+      "confidence": 0.204,
+      "lift": 2.43,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "hass avocados": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.232,
+      "lift": 1.77,
+      "support": 0.0039,
+      "category": "produce"
+    }
+  ],
+  "large alfresco eggs": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.223,
+      "lift": 1.71,
+      "support": 0.0032,
+      "category": "produce"
+    }
+  ],
+  "milk, organic, vitamin d": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.291,
+      "lift": 2.23,
+      "support": 0.002,
+      "category": "produce"
+    }
+  ],
+  "organic american cheese singles": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.233,
+      "lift": 1.78,
+      "support": 0.0015,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.202,
+      "lift": 1.23,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "organic appleapple": [
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.269,
+      "lift": 2.96,
+      "support": 0.0015,
+      "category": "produce"
+    },
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.266,
+      "lift": 2.04,
+      "support": 0.0015,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.252,
+      "lift": 1.53,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "organic baby broccoli": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.223,
+      "lift": 1.71,
+      "support": 0.0026,
+      "category": "produce"
+    }
+  ],
+  "organic baby carrots": [
+    {
+      "item": "Banana",
+      "confidence": 0.216,
+      "lift": 1.31,
+      "support": 0.0059,
+      "category": "produce"
+    },
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.214,
+      "lift": 1.64,
+      "support": 0.0059,
+      "category": "produce"
+    }
+  ],
+  "organic baby rainbow carrots": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.201,
+      "lift": 1.54,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "organic baby spinach": [
+    {
+      "item": "Banana",
+      "confidence": 0.217,
+      "lift": 1.32,
+      "support": 0.0181,
+      "category": "produce"
+    },
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.216,
+      "lift": 1.65,
+      "support": 0.0181,
+      "category": "produce"
+    }
+  ],
+  "organic bartlett pear": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.271,
+      "lift": 2.07,
+      "support": 0.0036,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.246,
+      "lift": 2.7,
+      "support": 0.0033,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.212,
+      "lift": 1.29,
+      "support": 0.0028,
+      "category": "produce"
+    }
+  ],
+  "organic beef hot dogs": [
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.234,
+      "lift": 2.57,
+      "support": 0.0014,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.209,
+      "lift": 1.27,
+      "support": 0.0012,
+      "category": "produce"
+    },
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.202,
+      "lift": 1.55,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "organic bell pepper": [
+    {
+      "item": "Organic Red Bell Pepper",
+      "confidence": 0.241,
+      "lift": 11.95,
+      "support": 0.0019,
+      "category": "produce"
+    },
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.224,
+      "lift": 1.72,
+      "support": 0.0018,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.205,
+      "lift": 2.25,
+      "support": 0.0016,
+      "category": "produce"
+    }
+  ],
+  "organic black beans": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.228,
+      "lift": 1.75,
+      "support": 0.0031,
+      "category": "produce"
+    }
+  ],
+  "organic blueberries": [
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.24,
+      "lift": 2.64,
+      "support": 0.0082,
+      "category": "produce"
+    },
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.216,
+      "lift": 1.65,
+      "support": 0.0074,
+      "category": "produce"
+    }
+  ],
+  "organic bosc pear": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.296,
+      "lift": 2.27,
+      "support": 0.0023,
+      "category": "produce"
+    }
+  ],
+  "organic bread with 21 whole grains": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.227,
+      "lift": 1.74,
+      "support": 0.0017,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.227,
+      "lift": 1.38,
+      "support": 0.0017,
+      "category": "produce"
+    }
+  ],
+  "organic broccoli": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.261,
+      "lift": 2.0,
+      "support": 0.0035,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.203,
+      "lift": 2.23,
+      "support": 0.0027,
+      "category": "produce"
+    }
+  ],
+  "organic broccoli crowns": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.316,
+      "lift": 2.42,
+      "support": 0.0021,
+      "category": "produce"
+    }
+  ],
+  "organic broccoli florets": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.228,
+      "lift": 1.75,
+      "support": 0.0025,
+      "category": "produce"
+    }
+  ],
+  "organic bunch beets": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.24,
+      "lift": 1.84,
+      "support": 0.0013,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Baby Spinach",
+      "confidence": 0.215,
+      "lift": 2.57,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "organic butternut squash": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.212,
+      "lift": 1.62,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "organic carrot bunch": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.253,
+      "lift": 1.94,
+      "support": 0.0032,
+      "category": "produce"
+    }
+  ],
+  "organic cheese frozen pizza": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.227,
+      "lift": 1.74,
+      "support": 0.0011,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.221,
+      "lift": 2.42,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "organic chicken & apple sausage": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.232,
+      "lift": 1.77,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "organic chicken strips": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.265,
+      "lift": 2.03,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "organic creamy peanut butter": [
+    {
+      "item": "Banana",
+      "confidence": 0.221,
+      "lift": 1.34,
+      "support": 0.0014,
+      "category": "produce"
+    },
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.22,
+      "lift": 1.68,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "organic cripps pink apples": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.259,
+      "lift": 1.98,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "organic cucumber": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.27,
+      "lift": 2.07,
+      "support": 0.0075,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Hass Avocado",
+      "confidence": 0.225,
+      "lift": 2.98,
+      "support": 0.0063,
+      "category": "produce"
+    }
+  ],
+  "organic d'anjou pears": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.299,
+      "lift": 2.29,
+      "support": 0.0051,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.223,
+      "lift": 1.35,
+      "support": 0.0038,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.202,
+      "lift": 2.22,
+      "support": 0.0035,
+      "category": "produce"
+    }
+  ],
+  "organic extra large grade aa brown eggs": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.238,
+      "lift": 1.82,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "organic frozen mango chunks": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.275,
+      "lift": 2.11,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "organic frozen peas": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.284,
+      "lift": 2.17,
+      "support": 0.002,
+      "category": "produce"
+    }
+  ],
+  "organic gala apples": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.251,
+      "lift": 1.92,
+      "support": 0.0064,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.231,
+      "lift": 1.4,
+      "support": 0.0059,
+      "category": "produce"
+    }
+  ],
+  "organic garnet sweet potato (yam)": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.252,
+      "lift": 1.93,
+      "support": 0.0046,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Baby Spinach",
+      "confidence": 0.237,
+      "lift": 2.83,
+      "support": 0.0043,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.22,
+      "lift": 1.34,
+      "support": 0.004,
+      "category": "produce"
+    }
+  ],
+  "organic ginger root": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.213,
+      "lift": 1.63,
+      "support": 0.0039,
+      "category": "produce"
+    }
+  ],
+  "organic golden delicious apple": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.298,
+      "lift": 2.28,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "organic good seed bread": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.229,
+      "lift": 1.75,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "organic grade a free range large brown eggs": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.219,
+      "lift": 1.68,
+      "support": 0.0031,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.207,
+      "lift": 1.25,
+      "support": 0.0029,
+      "category": "produce"
+    }
+  ],
+  "organic granny smith apple": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.252,
+      "lift": 1.93,
+      "support": 0.0053,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.204,
+      "lift": 1.24,
+      "support": 0.0043,
+      "category": "produce"
+    }
+  ],
+  "organic green seedless grapes": [
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.273,
+      "lift": 3.0,
+      "support": 0.002,
+      "category": "produce"
+    },
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.211,
+      "lift": 1.62,
+      "support": 0.0016,
+      "category": "produce"
+    }
+  ],
+  "organic hass avocado": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.292,
+      "lift": 2.24,
+      "support": 0.022,
+      "category": "produce"
+    }
+  ],
+  "organic honey sweet whole wheat bread": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.345,
+      "lift": 2.64,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "organic hothouse cucumbers": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.23,
+      "lift": 1.76,
+      "support": 0.002,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.204,
+      "lift": 2.24,
+      "support": 0.0017,
+      "category": "produce"
+    }
+  ],
+  "organic ketchup": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.234,
+      "lift": 1.79,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "organic kiwi": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.295,
+      "lift": 2.26,
+      "support": 0.0053,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.249,
+      "lift": 2.73,
+      "support": 0.0045,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.207,
+      "lift": 1.26,
+      "support": 0.0037,
+      "category": "produce"
+    }
+  ],
+  "organic lacinato (dinosaur) kale": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.226,
+      "lift": 1.73,
+      "support": 0.0034,
+      "category": "produce"
+    }
+  ],
+  "organic large brown eggs": [
+    {
+      "item": "Banana",
+      "confidence": 0.233,
+      "lift": 1.42,
+      "support": 0.0011,
+      "category": "produce"
+    },
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.21,
+      "lift": 1.61,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "organic large brown grade aa cage free eggs": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.228,
+      "lift": 1.75,
+      "support": 0.0025,
+      "category": "produce"
+    }
+  ],
+  "organic large extra fancy fuji apple": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.315,
+      "lift": 2.41,
+      "support": 0.0082,
+      "category": "produce"
+    }
+  ],
+  "organic large grade aa brown eggs": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.259,
+      "lift": 1.98,
+      "support": 0.0023,
+      "category": "produce"
+    }
+  ],
+  "organic large green asparagus": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.272,
+      "lift": 2.08,
+      "support": 0.0017,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Hass Avocado",
+      "confidence": 0.262,
+      "lift": 3.48,
+      "support": 0.0017,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.257,
+      "lift": 2.82,
+      "support": 0.0016,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Baby Spinach",
+      "confidence": 0.206,
+      "lift": 2.46,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "organic lemon": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.257,
+      "lift": 1.97,
+      "support": 0.0079,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Hass Avocado",
+      "confidence": 0.24,
+      "lift": 3.18,
+      "support": 0.0074,
+      "category": "produce"
+    }
+  ],
+  "organic mexican blend finely shredded cheese": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.241,
+      "lift": 1.85,
+      "support": 0.0015,
+      "category": "produce"
+    }
+  ],
+  "organic milk": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.241,
+      "lift": 1.85,
+      "support": 0.0023,
+      "category": "produce"
+    }
+  ],
+  "organic milk reduced fat, 2% milkfat": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.237,
+      "lift": 1.81,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "organic navel orange": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.341,
+      "lift": 2.61,
+      "support": 0.0051,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Hass Avocado",
+      "confidence": 0.201,
+      "lift": 2.66,
+      "support": 0.003,
+      "category": "produce"
+    }
+  ],
+  "organic nectarine": [
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.353,
+      "lift": 3.88,
+      "support": 0.0017,
+      "category": "produce"
+    },
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.251,
+      "lift": 1.92,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "organic old fashioned rolled oats": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.225,
+      "lift": 1.73,
+      "support": 0.0015,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.223,
+      "lift": 1.36,
+      "support": 0.0015,
+      "category": "produce"
+    }
+  ],
+  "organic original hommus": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.273,
+      "lift": 2.09,
+      "support": 0.0013,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Hass Avocado",
+      "confidence": 0.217,
+      "lift": 2.88,
+      "support": 0.001,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.214,
+      "lift": 2.35,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "organic plain greek whole milk yogurt": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.278,
+      "lift": 2.13,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "organic plain whole milk yogurt": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.266,
+      "lift": 2.04,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "organic rainbow carrots": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.202,
+      "lift": 1.55,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "organic raspberries": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.299,
+      "lift": 2.29,
+      "support": 0.0141,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.24,
+      "lift": 2.64,
+      "support": 0.0113,
+      "category": "produce"
+    }
+  ],
+  "organic red bell pepper": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.227,
+      "lift": 1.74,
+      "support": 0.0046,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.206,
+      "lift": 2.27,
+      "support": 0.0042,
+      "category": "produce"
+    }
+  ],
+  "organic red cabbage": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.207,
+      "lift": 1.58,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "organic red delicious apple": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.251,
+      "lift": 1.92,
+      "support": 0.0012,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.24,
+      "lift": 1.46,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "organic red on the vine tomato": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.281,
+      "lift": 2.15,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "organic reduced fat 2% milk": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.211,
+      "lift": 1.62,
+      "support": 0.0035,
+      "category": "produce"
+    }
+  ],
+  "organic roasted turkey breast": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.281,
+      "lift": 2.15,
+      "support": 0.0029,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.211,
+      "lift": 2.32,
+      "support": 0.0021,
+      "category": "produce"
+    }
+  ],
+  "organic roma tomato": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.229,
+      "lift": 1.76,
+      "support": 0.0024,
+      "category": "produce"
+    }
+  ],
+  "organic russet potato": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.236,
+      "lift": 1.81,
+      "support": 0.0026,
+      "category": "produce"
+    }
+  ],
+  "organic salted butter": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.255,
+      "lift": 1.95,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "organic shredded mozzarella": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.232,
+      "lift": 1.77,
+      "support": 0.0015,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.213,
+      "lift": 2.34,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "organic small bunch celery": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.226,
+      "lift": 1.73,
+      "support": 0.0054,
+      "category": "produce"
+    }
+  ],
+  "organic small curd cottage cheese": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.251,
+      "lift": 1.92,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "organic snipped green beans": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.229,
+      "lift": 1.75,
+      "support": 0.0014,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.22,
+      "lift": 2.42,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "organic sticks low moisture part skim mozzarella string cheese": [
+    {
+      "item": "Banana",
+      "confidence": 0.232,
+      "lift": 1.41,
+      "support": 0.0027,
+      "category": "produce"
+    },
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.228,
+      "lift": 1.74,
+      "support": 0.0027,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.202,
+      "lift": 2.22,
+      "support": 0.0024,
+      "category": "produce"
+    }
+  ],
+  "organic strawberries": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.233,
+      "lift": 1.78,
+      "support": 0.0212,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.209,
+      "lift": 1.27,
+      "support": 0.019,
+      "category": "produce"
+    }
+  ],
+  "organic sunday bacon": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.277,
+      "lift": 2.12,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "organic thompson seedless raisins": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.293,
+      "lift": 2.25,
+      "support": 0.0013,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.239,
+      "lift": 1.45,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "organic tomato basil pasta sauce": [
+    {
+      "item": "Banana",
+      "confidence": 0.231,
+      "lift": 1.4,
+      "support": 0.0014,
+      "category": "produce"
+    },
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.202,
+      "lift": 1.55,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "organic tomato cluster": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.231,
+      "lift": 1.77,
+      "support": 0.0052,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Hass Avocado",
+      "confidence": 0.203,
+      "lift": 2.69,
+      "support": 0.0045,
+      "category": "produce"
+    }
+  ],
+  "organic turkey bacon": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.251,
+      "lift": 1.92,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "organic uncured sliced black forest ham": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.268,
+      "lift": 2.05,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "organic unsalted butter": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.225,
+      "lift": 1.72,
+      "support": 0.0017,
+      "category": "produce"
+    }
+  ],
+  "organic unsweetened almond milk": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.243,
+      "lift": 1.86,
+      "support": 0.0049,
+      "category": "produce"
+    }
+  ],
+  "organic unsweetened vanilla almond milk": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.236,
+      "lift": 1.81,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "organic vanilla almond milk": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.237,
+      "lift": 1.81,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "organic whole cashews": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.256,
+      "lift": 1.96,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "organic whole grain wheat english muffins": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.277,
+      "lift": 2.12,
+      "support": 0.0013,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.223,
+      "lift": 1.35,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "organic whole grassmilk milk": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.284,
+      "lift": 2.17,
+      "support": 0.0015,
+      "category": "produce"
+    }
+  ],
+  "organic whole strawberries": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.271,
+      "lift": 2.08,
+      "support": 0.0031,
+      "category": "produce"
+    },
+    {
+      "item": "Frozen Organic Wild Blueberries",
+      "confidence": 0.214,
+      "lift": 20.13,
+      "support": 0.0024,
+      "category": "frozen"
+    },
+    {
+      "item": "Organic Baby Spinach",
+      "confidence": 0.21,
+      "lift": 2.51,
+      "support": 0.0024,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.203,
+      "lift": 1.23,
+      "support": 0.0023,
+      "category": "produce"
+    }
+  ],
+  "organic whole string cheese": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.248,
+      "lift": 1.9,
+      "support": 0.0051,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.248,
+      "lift": 1.51,
+      "support": 0.0052,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.224,
+      "lift": 2.47,
+      "support": 0.0047,
+      "category": "produce"
+    }
+  ],
+  "organic yellow onion": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.215,
+      "lift": 1.65,
+      "support": 0.0085,
+      "category": "produce"
+    }
+  ],
+  "organic yellow peaches": [
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.35,
+      "lift": 3.85,
+      "support": 0.0026,
+      "category": "produce"
+    },
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.233,
+      "lift": 1.79,
+      "support": 0.0017,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.209,
+      "lift": 1.27,
+      "support": 0.0015,
+      "category": "produce"
+    }
+  ],
+  "organic zucchini": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.22,
+      "lift": 1.69,
+      "support": 0.0083,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Baby Spinach",
+      "confidence": 0.2,
+      "lift": 2.39,
+      "support": 0.0075,
+      "category": "produce"
+    }
+  ],
+  "plain greek yogurt": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.212,
+      "lift": 1.62,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "super greens salad": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.23,
+      "lift": 1.76,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "unsweetened almondmilk": [
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.205,
+      "lift": 1.57,
+      "support": 0.0035,
+      "category": "produce"
+    }
+  ],
+  "whipped cream cheese": [
+    {
+      "item": "Banana",
+      "confidence": 0.248,
+      "lift": 1.5,
+      "support": 0.0028,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.207,
+      "lift": 2.28,
+      "support": 0.0023,
+      "category": "produce"
+    },
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.206,
+      "lift": 1.58,
+      "support": 0.0023,
+      "category": "produce"
+    }
+  ],
+  "whole milk plain yogurt": [
+    {
+      "item": "Organic Whole Milk",
+      "confidence": 0.271,
+      "lift": 5.68,
+      "support": 0.0015,
+      "category": "dairy"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.244,
+      "lift": 1.48,
+      "support": 0.0013,
+      "category": "produce"
+    },
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.226,
+      "lift": 1.73,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "yokids squeezers organic low-fat yogurt, strawberry": [
+    {
+      "item": "Banana",
+      "confidence": 0.289,
+      "lift": 1.75,
+      "support": 0.002,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.261,
+      "lift": 2.87,
+      "support": 0.0018,
+      "category": "produce"
+    },
+    {
+      "item": "Bag of Organic Bananas",
+      "confidence": 0.213,
+      "lift": 1.63,
+      "support": 0.0015,
+      "category": "produce"
+    }
+  ],
+  "baked aged white cheddar rice and corn puffs": [
+    {
+      "item": "Banana",
+      "confidence": 0.243,
+      "lift": 1.48,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "bartlett pears": [
+    {
+      "item": "Banana",
+      "confidence": 0.399,
+      "lift": 2.42,
+      "support": 0.005,
+      "category": "produce"
+    }
+  ],
+  "basil pesto": [
+    {
+      "item": "Banana",
+      "confidence": 0.237,
+      "lift": 1.44,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "berry medley": [
+    {
+      "item": "Banana",
+      "confidence": 0.332,
+      "lift": 2.02,
+      "support": 0.0016,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Baby Spinach",
+      "confidence": 0.211,
+      "lift": 2.52,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "bing cherries": [
+    {
+      "item": "Banana",
+      "confidence": 0.259,
+      "lift": 1.58,
+      "support": 0.0013,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.234,
+      "lift": 2.57,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "black beans": [
+    {
+      "item": "Banana",
+      "confidence": 0.229,
+      "lift": 1.39,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "black plum": [
+    {
+      "item": "Banana",
+      "confidence": 0.347,
+      "lift": 2.11,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "blueberries": [
+    {
+      "item": "Banana",
+      "confidence": 0.3,
+      "lift": 1.82,
+      "support": 0.0058,
+      "category": "produce"
+    }
+  ],
+  "boneless skinless chicken breast": [
+    {
+      "item": "Banana",
+      "confidence": 0.259,
+      "lift": 1.57,
+      "support": 0.002,
+      "category": "produce"
+    }
+  ],
+  "boneless skinless chicken breasts": [
+    {
+      "item": "Banana",
+      "confidence": 0.29,
+      "lift": 1.76,
+      "support": 0.0052,
+      "category": "produce"
+    }
+  ],
+  "broccoli crown": [
+    {
+      "item": "Banana",
+      "confidence": 0.335,
+      "lift": 2.03,
+      "support": 0.005,
+      "category": "produce"
+    }
+  ],
+  "brussels sprouts": [
+    {
+      "item": "Banana",
+      "confidence": 0.21,
+      "lift": 1.28,
+      "support": 0.0017,
+      "category": "produce"
+    }
+  ],
+  "bunched cilantro": [
+    {
+      "item": "Limes",
+      "confidence": 0.29,
+      "lift": 5.89,
+      "support": 0.0047,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.247,
+      "lift": 1.5,
+      "support": 0.004,
+      "category": "produce"
+    }
+  ],
+  "cage free brown eggs-large, grade a": [
+    {
+      "item": "Banana",
+      "confidence": 0.3,
+      "lift": 1.82,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "carrots": [
+    {
+      "item": "Banana",
+      "confidence": 0.217,
+      "lift": 1.32,
+      "support": 0.0054,
+      "category": "produce"
+    }
+  ],
+  "cheddar bunnies snack crackers": [
+    {
+      "item": "Banana",
+      "confidence": 0.278,
+      "lift": 1.69,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "cherubs heavenly salad tomatoes": [
+    {
+      "item": "Banana",
+      "confidence": 0.241,
+      "lift": 1.46,
+      "support": 0.0017,
+      "category": "produce"
+    }
+  ],
+  "chicken & maple breakfast sausage": [
+    {
+      "item": "Banana",
+      "confidence": 0.231,
+      "lift": 1.4,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "clementines, bag": [
+    {
+      "item": "Banana",
+      "confidence": 0.33,
+      "lift": 2.0,
+      "support": 0.0045,
+      "category": "produce"
+    }
+  ],
+  "colby cheese sticks": [
+    {
+      "item": "Banana",
+      "confidence": 0.262,
+      "lift": 1.59,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "corn tortillas": [
+    {
+      "item": "Banana",
+      "confidence": 0.251,
+      "lift": 1.52,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "crackers cheddar bunnies snack packs": [
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.245,
+      "lift": 2.69,
+      "support": 0.001,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.239,
+      "lift": 1.45,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "creamy almond butter": [
+    {
+      "item": "Banana",
+      "confidence": 0.202,
+      "lift": 1.23,
+      "support": 0.0015,
+      "category": "produce"
+    }
+  ],
+  "cucumber kirby": [
+    {
+      "item": "Banana",
+      "confidence": 0.327,
+      "lift": 1.99,
+      "support": 0.0111,
+      "category": "produce"
+    }
+  ],
+  "diced tomatoes": [
+    {
+      "item": "Banana",
+      "confidence": 0.241,
+      "lift": 1.46,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "english seedless cucumber": [
+    {
+      "item": "Banana",
+      "confidence": 0.239,
+      "lift": 1.45,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "european cucumber": [
+    {
+      "item": "Banana",
+      "confidence": 0.253,
+      "lift": 1.54,
+      "support": 0.0016,
+      "category": "produce"
+    }
+  ],
+  "ezekiel 4:9 bread organic sprouted whole grain": [
+    {
+      "item": "Banana",
+      "confidence": 0.225,
+      "lift": 1.37,
+      "support": 0.0014,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Baby Spinach",
+      "confidence": 0.207,
+      "lift": 2.48,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "fat free milk": [
+    {
+      "item": "Banana",
+      "confidence": 0.248,
+      "lift": 1.5,
+      "support": 0.0025,
+      "category": "produce"
+    }
+  ],
+  "feta cheese crumbles": [
+    {
+      "item": "Banana",
+      "confidence": 0.249,
+      "lift": 1.51,
+      "support": 0.003,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Baby Spinach",
+      "confidence": 0.225,
+      "lift": 2.68,
+      "support": 0.0027,
+      "category": "produce"
+    }
+  ],
+  "flat parsley, bunch": [
+    {
+      "item": "Banana",
+      "confidence": 0.251,
+      "lift": 1.52,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "fresh ca grown eggs": [
+    {
+      "item": "Banana",
+      "confidence": 0.274,
+      "lift": 1.66,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "fridge pack cola": [
+    {
+      "item": "Banana",
+      "confidence": 0.211,
+      "lift": 1.28,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "frozen broccoli florets": [
+    {
+      "item": "Banana",
+      "confidence": 0.301,
+      "lift": 1.83,
+      "support": 0.0016,
+      "category": "produce"
+    }
+  ],
+  "gala apples": [
+    {
+      "item": "Banana",
+      "confidence": 0.385,
+      "lift": 2.33,
+      "support": 0.0032,
+      "category": "produce"
+    }
+  ],
+  "garlic": [
+    {
+      "item": "Banana",
+      "confidence": 0.227,
+      "lift": 1.38,
+      "support": 0.0029,
+      "category": "produce"
+    }
+  ],
+  "grade a large white eggs": [
+    {
+      "item": "Banana",
+      "confidence": 0.279,
+      "lift": 1.69,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "granny smith apples": [
+    {
+      "item": "Banana",
+      "confidence": 0.338,
+      "lift": 2.05,
+      "support": 0.0043,
+      "category": "produce"
+    }
+  ],
+  "grape white/green seedless": [
+    {
+      "item": "Banana",
+      "confidence": 0.299,
+      "lift": 1.82,
+      "support": 0.0042,
+      "category": "produce"
+    }
+  ],
+  "green beans": [
+    {
+      "item": "Banana",
+      "confidence": 0.31,
+      "lift": 1.88,
+      "support": 0.0032,
+      "category": "produce"
+    }
+  ],
+  "green onions": [
+    {
+      "item": "Banana",
+      "confidence": 0.26,
+      "lift": 1.58,
+      "support": 0.0024,
+      "category": "produce"
+    }
+  ],
+  "green peas": [
+    {
+      "item": "Banana",
+      "confidence": 0.267,
+      "lift": 1.62,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "ground turkey breast": [
+    {
+      "item": "Banana",
+      "confidence": 0.234,
+      "lift": 1.42,
+      "support": 0.0021,
+      "category": "produce"
+    }
+  ],
+  "half & half": [
+    {
+      "item": "Banana",
+      "confidence": 0.233,
+      "lift": 1.42,
+      "support": 0.0057,
+      "category": "produce"
+    }
+  ],
+  "hass avocado": [
+    {
+      "item": "Banana",
+      "confidence": 0.215,
+      "lift": 1.31,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "honey nut cheerios": [
+    {
+      "item": "Banana",
+      "confidence": 0.273,
+      "lift": 1.66,
+      "support": 0.0026,
+      "category": "produce"
+    }
+  ],
+  "honeycrisp apple": [
+    {
+      "item": "Banana",
+      "confidence": 0.36,
+      "lift": 2.19,
+      "support": 0.0102,
+      "category": "produce"
+    }
+  ],
+  "icelandic style skyr blueberry non-fat yogurt": [
+    {
+      "item": "Non Fat Raspberry Yogurt",
+      "confidence": 0.381,
+      "lift": 63.59,
+      "support": 0.0027,
+      "category": "dairy"
+    },
+    {
+      "item": "Vanilla Skyr Nonfat Yogurt",
+      "confidence": 0.362,
+      "lift": 54.76,
+      "support": 0.0025,
+      "category": "dairy"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.264,
+      "lift": 1.6,
+      "support": 0.0018,
+      "category": "produce"
+    },
+    {
+      "item": "Nonfat Icelandic Style Strawberry Yogurt",
+      "confidence": 0.245,
+      "lift": 62.24,
+      "support": 0.0017,
+      "category": "dairy"
+    },
+    {
+      "item": "Non Fat Acai & Mixed Berries Yogurt",
+      "confidence": 0.209,
+      "lift": 67.46,
+      "support": 0.0015,
+      "category": "dairy"
+    }
+  ],
+  "jalapeno peppers": [
+    {
+      "item": "Limes",
+      "confidence": 0.272,
+      "lift": 5.52,
+      "support": 0.004,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.219,
+      "lift": 1.33,
+      "support": 0.0033,
+      "category": "produce"
+    }
+  ],
+  "kids organic chocolate chip zbars": [
+    {
+      "item": "Banana",
+      "confidence": 0.295,
+      "lift": 1.79,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "kiwi": [
+    {
+      "item": "Banana",
+      "confidence": 0.316,
+      "lift": 1.92,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "large brown eggs": [
+    {
+      "item": "Banana",
+      "confidence": 0.26,
+      "lift": 1.58,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "large grapefruit": [
+    {
+      "item": "Banana",
+      "confidence": 0.269,
+      "lift": 1.63,
+      "support": 0.002,
+      "category": "produce"
+    }
+  ],
+  "large greenhouse tomato": [
+    {
+      "item": "Banana",
+      "confidence": 0.281,
+      "lift": 1.7,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "large lemon": [
+    {
+      "item": "Banana",
+      "confidence": 0.275,
+      "lift": 1.67,
+      "support": 0.0149,
+      "category": "produce"
+    }
+  ],
+  "large yellow flesh nectarine": [
+    {
+      "item": "Banana",
+      "confidence": 0.363,
+      "lift": 2.2,
+      "support": 0.0019,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.213,
+      "lift": 2.35,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "lemon hummus": [
+    {
+      "item": "Banana",
+      "confidence": 0.231,
+      "lift": 1.4,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "lemonade": [
+    {
+      "item": "Banana",
+      "confidence": 0.2,
+      "lift": 1.22,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "lightly salted baked snap pea crisps": [
+    {
+      "item": "Banana",
+      "confidence": 0.225,
+      "lift": 1.36,
+      "support": 0.0019,
+      "category": "produce"
+    }
+  ],
+  "lime sparkling water": [
+    {
+      "item": "Sparkling Water Grapefruit",
+      "confidence": 0.276,
+      "lift": 10.4,
+      "support": 0.0046,
+      "category": "beverages"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.204,
+      "lift": 1.24,
+      "support": 0.0034,
+      "category": "produce"
+    }
+  ],
+  "limes": [
+    {
+      "item": "Banana",
+      "confidence": 0.229,
+      "lift": 1.39,
+      "support": 0.0112,
+      "category": "produce"
+    }
+  ],
+  "macaroni & cheese": [
+    {
+      "item": "Banana",
+      "confidence": 0.219,
+      "lift": 1.33,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "mandarin oranges": [
+    {
+      "item": "Banana",
+      "confidence": 0.346,
+      "lift": 2.1,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "mango chunks": [
+    {
+      "item": "Banana",
+      "confidence": 0.333,
+      "lift": 2.02,
+      "support": 0.002,
+      "category": "produce"
+    },
+    {
+      "item": "Pineapple Chunks",
+      "confidence": 0.226,
+      "lift": 25.4,
+      "support": 0.0014,
+      "category": "frozen"
+    },
+    {
+      "item": "Organic Baby Spinach",
+      "confidence": 0.216,
+      "lift": 2.58,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "marinara pasta sauce": [
+    {
+      "item": "Banana",
+      "confidence": 0.312,
+      "lift": 1.9,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "marinara sauce": [
+    {
+      "item": "Banana",
+      "confidence": 0.206,
+      "lift": 1.25,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "medium navel orange": [
+    {
+      "item": "Banana",
+      "confidence": 0.354,
+      "lift": 2.15,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "michigan organic kale": [
+    {
+      "item": "Banana",
+      "confidence": 0.23,
+      "lift": 1.4,
+      "support": 0.0055,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Baby Spinach",
+      "confidence": 0.201,
+      "lift": 2.4,
+      "support": 0.0048,
+      "category": "produce"
+    }
+  ],
+  "mild cheddar cheese sticks": [
+    {
+      "item": "Banana",
+      "confidence": 0.315,
+      "lift": 1.91,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "mild salsa": [
+    {
+      "item": "Banana",
+      "confidence": 0.217,
+      "lift": 1.32,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "mini original babybel cheese": [
+    {
+      "item": "Banana",
+      "confidence": 0.265,
+      "lift": 1.61,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "natural chicken & sage breakfast sausage": [
+    {
+      "item": "Banana",
+      "confidence": 0.2,
+      "lift": 1.22,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "naturals chicken nuggets": [
+    {
+      "item": "Banana",
+      "confidence": 0.265,
+      "lift": 1.61,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "no salt added black beans": [
+    {
+      "item": "Banana",
+      "confidence": 0.289,
+      "lift": 1.76,
+      "support": 0.0028,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Baby Spinach",
+      "confidence": 0.218,
+      "lift": 2.61,
+      "support": 0.0021,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Avocado",
+      "confidence": 0.21,
+      "lift": 3.47,
+      "support": 0.0021,
+      "category": "produce"
+    }
+  ],
+  "non fat raspberry yogurt": [
+    {
+      "item": "Icelandic Style Skyr Blueberry Non-fat Yogurt",
+      "confidence": 0.443,
+      "lift": 63.59,
+      "support": 0.0027,
+      "category": "dairy"
+    },
+    {
+      "item": "Vanilla Skyr Nonfat Yogurt",
+      "confidence": 0.319,
+      "lift": 48.2,
+      "support": 0.0019,
+      "category": "dairy"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.25,
+      "lift": 1.52,
+      "support": 0.0015,
+      "category": "produce"
+    },
+    {
+      "item": "Nonfat Icelandic Style Strawberry Yogurt",
+      "confidence": 0.234,
+      "lift": 59.47,
+      "support": 0.0014,
+      "category": "dairy"
+    }
+  ],
+  "orange bell pepper": [
+    {
+      "item": "Banana",
+      "confidence": 0.269,
+      "lift": 1.63,
+      "support": 0.0037,
+      "category": "produce"
+    }
+  ],
+  "orange juice": [
+    {
+      "item": "Banana",
+      "confidence": 0.291,
+      "lift": 1.77,
+      "support": 0.0017,
+      "category": "produce"
+    }
+  ],
+  "orange sparkling water": [
+    {
+      "item": "Banana",
+      "confidence": 0.239,
+      "lift": 1.45,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "organic 2% reduced fat milk": [
+    {
+      "item": "Banana",
+      "confidence": 0.202,
+      "lift": 1.22,
+      "support": 0.0016,
+      "category": "produce"
+    }
+  ],
+  "organic avocado": [
+    {
+      "item": "Banana",
+      "confidence": 0.304,
+      "lift": 1.84,
+      "support": 0.0184,
+      "category": "produce"
+    }
+  ],
+  "organic baby arugula": [
+    {
+      "item": "Banana",
+      "confidence": 0.208,
+      "lift": 1.26,
+      "support": 0.0052,
+      "category": "produce"
+    }
+  ],
+  "organic baby kale": [
+    {
+      "item": "Organic Baby Spinach",
+      "confidence": 0.22,
+      "lift": 2.63,
+      "support": 0.0015,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.215,
+      "lift": 1.31,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "organic baby spinach salad": [
+    {
+      "item": "Banana",
+      "confidence": 0.238,
+      "lift": 1.45,
+      "support": 0.0015,
+      "category": "produce"
+    }
+  ],
+  "organic blackberries": [
+    {
+      "item": "Banana",
+      "confidence": 0.233,
+      "lift": 1.42,
+      "support": 0.0051,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.206,
+      "lift": 2.26,
+      "support": 0.0045,
+      "category": "produce"
+    }
+  ],
+  "organic brown rice": [
+    {
+      "item": "Banana",
+      "confidence": 0.224,
+      "lift": 1.36,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "organic bunny fruit snacks berry patch": [
+    {
+      "item": "Banana",
+      "confidence": 0.265,
+      "lift": 1.61,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "organic extra firm tofu": [
+    {
+      "item": "Banana",
+      "confidence": 0.26,
+      "lift": 1.58,
+      "support": 0.0027,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Baby Spinach",
+      "confidence": 0.204,
+      "lift": 2.44,
+      "support": 0.0021,
+      "category": "produce"
+    }
+  ],
+  "organic fat free milk": [
+    {
+      "item": "Banana",
+      "confidence": 0.258,
+      "lift": 1.57,
+      "support": 0.0024,
+      "category": "produce"
+    }
+  ],
+  "organic fuji apple": [
+    {
+      "item": "Banana",
+      "confidence": 0.388,
+      "lift": 2.36,
+      "support": 0.0123,
+      "category": "produce"
+    }
+  ],
+  "organic garbanzo beans": [
+    {
+      "item": "Banana",
+      "confidence": 0.212,
+      "lift": 1.29,
+      "support": 0.0023,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Baby Spinach",
+      "confidence": 0.209,
+      "lift": 2.49,
+      "support": 0.0022,
+      "category": "produce"
+    }
+  ],
+  "organic grade a large brown eggs": [
+    {
+      "item": "Banana",
+      "confidence": 0.206,
+      "lift": 1.25,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "organic grape tomatoes": [
+    {
+      "item": "Banana",
+      "confidence": 0.222,
+      "lift": 1.35,
+      "support": 0.0067,
+      "category": "produce"
+    }
+  ],
+  "organic green leaf lettuce": [
+    {
+      "item": "Banana",
+      "confidence": 0.22,
+      "lift": 1.34,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "organic large grade a brown eggs": [
+    {
+      "item": "Banana",
+      "confidence": 0.227,
+      "lift": 1.38,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "organic low sodium chicken broth": [
+    {
+      "item": "Banana",
+      "confidence": 0.226,
+      "lift": 1.37,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "organic lowfat 1% milk": [
+    {
+      "item": "Banana",
+      "confidence": 0.283,
+      "lift": 1.72,
+      "support": 0.0015,
+      "category": "produce"
+    }
+  ],
+  "organic peeled whole baby carrots": [
+    {
+      "item": "Banana",
+      "confidence": 0.277,
+      "lift": 1.68,
+      "support": 0.0054,
+      "category": "produce"
+    }
+  ],
+  "organic reduced fat milk": [
+    {
+      "item": "Banana",
+      "confidence": 0.293,
+      "lift": 1.78,
+      "support": 0.0036,
+      "category": "produce"
+    }
+  ],
+  "organic romaine lettuce": [
+    {
+      "item": "Banana",
+      "confidence": 0.201,
+      "lift": 1.22,
+      "support": 0.0025,
+      "category": "produce"
+    }
+  ],
+  "organic shredded carrots": [
+    {
+      "item": "Banana",
+      "confidence": 0.232,
+      "lift": 1.41,
+      "support": 0.0016,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Baby Spinach",
+      "confidence": 0.209,
+      "lift": 2.5,
+      "support": 0.0015,
+      "category": "produce"
+    }
+  ],
+  "organic spaghetti squash": [
+    {
+      "item": "Banana",
+      "confidence": 0.219,
+      "lift": 1.33,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "organic spring mix salad": [
+    {
+      "item": "Banana",
+      "confidence": 0.213,
+      "lift": 1.29,
+      "support": 0.0016,
+      "category": "produce"
+    }
+  ],
+  "organic strawberry smoothie": [
+    {
+      "item": "Banana",
+      "confidence": 0.284,
+      "lift": 1.73,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "organic summer strawberry bunny fruit snacks": [
+    {
+      "item": "Banana",
+      "confidence": 0.231,
+      "lift": 1.4,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "organic tomato paste": [
+    {
+      "item": "Banana",
+      "confidence": 0.217,
+      "lift": 1.32,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "organic whole milk": [
+    {
+      "item": "Banana",
+      "confidence": 0.23,
+      "lift": 1.4,
+      "support": 0.011,
+      "category": "produce"
+    }
+  ],
+  "organic whole milk with dha omega-3": [
+    {
+      "item": "Banana",
+      "confidence": 0.254,
+      "lift": 1.54,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "organic yams": [
+    {
+      "item": "Banana",
+      "confidence": 0.213,
+      "lift": 1.29,
+      "support": 0.0015,
+      "category": "produce"
+    }
+  ],
+  "original hummus": [
+    {
+      "item": "Banana",
+      "confidence": 0.265,
+      "lift": 1.61,
+      "support": 0.0067,
+      "category": "produce"
+    }
+  ],
+  "original no pulp 100% florida orange juice": [
+    {
+      "item": "Banana",
+      "confidence": 0.288,
+      "lift": 1.75,
+      "support": 0.0019,
+      "category": "produce"
+    }
+  ],
+  "original nooks & crannies english muffins": [
+    {
+      "item": "Banana",
+      "confidence": 0.219,
+      "lift": 1.33,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "original orange juice": [
+    {
+      "item": "Banana",
+      "confidence": 0.219,
+      "lift": 1.33,
+      "support": 0.0019,
+      "category": "produce"
+    }
+  ],
+  "original pure creamy almond milk": [
+    {
+      "item": "Banana",
+      "confidence": 0.21,
+      "lift": 1.28,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "original veggie straws": [
+    {
+      "item": "Banana",
+      "confidence": 0.245,
+      "lift": 1.49,
+      "support": 0.0015,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.205,
+      "lift": 2.25,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "oven roasted turkey breast": [
+    {
+      "item": "Banana",
+      "confidence": 0.212,
+      "lift": 1.29,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "peach pear flavored sparkling water": [
+    {
+      "item": "Sparkling Water Grapefruit",
+      "confidence": 0.318,
+      "lift": 12.0,
+      "support": 0.0023,
+      "category": "beverages"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.204,
+      "lift": 1.24,
+      "support": 0.0014,
+      "category": "produce"
+    },
+    {
+      "item": "Lime Sparkling Water",
+      "confidence": 0.204,
+      "lift": 12.3,
+      "support": 0.0014,
+      "category": "beverages"
+    }
+  ],
+  "pineapple chunks": [
+    {
+      "item": "Organic Baby Spinach",
+      "confidence": 0.253,
+      "lift": 3.02,
+      "support": 0.0022,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.233,
+      "lift": 1.42,
+      "support": 0.0021,
+      "category": "produce"
+    }
+  ],
+  "pita chips simply naked": [
+    {
+      "item": "Banana",
+      "confidence": 0.243,
+      "lift": 1.47,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "pretzel crisps original deli style pretzel crackers": [
+    {
+      "item": "Banana",
+      "confidence": 0.25,
+      "lift": 1.52,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "pure coconut water": [
+    {
+      "item": "Banana",
+      "confidence": 0.222,
+      "lift": 1.35,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "pure sparkling water": [
+    {
+      "item": "Sparkling Water Grapefruit",
+      "confidence": 0.215,
+      "lift": 8.09,
+      "support": 0.0022,
+      "category": "beverages"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.203,
+      "lift": 1.24,
+      "support": 0.0021,
+      "category": "produce"
+    }
+  ],
+  "raisin bran cereal": [
+    {
+      "item": "Banana",
+      "confidence": 0.232,
+      "lift": 1.41,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "red onion": [
+    {
+      "item": "Banana",
+      "confidence": 0.273,
+      "lift": 1.66,
+      "support": 0.0041,
+      "category": "produce"
+    }
+  ],
+  "red peppers": [
+    {
+      "item": "Banana",
+      "confidence": 0.268,
+      "lift": 1.63,
+      "support": 0.0052,
+      "category": "produce"
+    }
+  ],
+  "red raspberries": [
+    {
+      "item": "Banana",
+      "confidence": 0.295,
+      "lift": 1.79,
+      "support": 0.0027,
+      "category": "produce"
+    }
+  ],
+  "red vine tomato": [
+    {
+      "item": "Banana",
+      "confidence": 0.299,
+      "lift": 1.81,
+      "support": 0.0058,
+      "category": "produce"
+    }
+  ],
+  "roasted red pepper hummus": [
+    {
+      "item": "Banana",
+      "confidence": 0.227,
+      "lift": 1.38,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "roasted turkey": [
+    {
+      "item": "Banana",
+      "confidence": 0.29,
+      "lift": 1.76,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "roasted turkey breast": [
+    {
+      "item": "Banana",
+      "confidence": 0.221,
+      "lift": 1.34,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "roma tomato": [
+    {
+      "item": "Banana",
+      "confidence": 0.292,
+      "lift": 1.77,
+      "support": 0.0041,
+      "category": "produce"
+    }
+  ],
+  "romaine lettuce": [
+    {
+      "item": "Banana",
+      "confidence": 0.286,
+      "lift": 1.74,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "russet potato": [
+    {
+      "item": "Banana",
+      "confidence": 0.261,
+      "lift": 1.59,
+      "support": 0.0027,
+      "category": "produce"
+    }
+  ],
+  "salted butter": [
+    {
+      "item": "Banana",
+      "confidence": 0.268,
+      "lift": 1.63,
+      "support": 0.0018,
+      "category": "produce"
+    }
+  ],
+  "sea salt pita chips": [
+    {
+      "item": "Banana",
+      "confidence": 0.246,
+      "lift": 1.5,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "seedless red grapes": [
+    {
+      "item": "Banana",
+      "confidence": 0.306,
+      "lift": 1.86,
+      "support": 0.0086,
+      "category": "produce"
+    }
+  ],
+  "seedless small watermelon": [
+    {
+      "item": "Banana",
+      "confidence": 0.223,
+      "lift": 1.36,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "shallot": [
+    {
+      "item": "Banana",
+      "confidence": 0.248,
+      "lift": 1.5,
+      "support": 0.0015,
+      "category": "produce"
+    },
+    {
+      "item": "Large Lemon",
+      "confidence": 0.236,
+      "lift": 4.35,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "sharp cheddar cheese": [
+    {
+      "item": "Banana",
+      "confidence": 0.235,
+      "lift": 1.43,
+      "support": 0.0025,
+      "category": "produce"
+    }
+  ],
+  "shredded mild cheddar cheese": [
+    {
+      "item": "Banana",
+      "confidence": 0.227,
+      "lift": 1.38,
+      "support": 0.0021,
+      "category": "produce"
+    }
+  ],
+  "shredded mozzarella": [
+    {
+      "item": "Banana",
+      "confidence": 0.239,
+      "lift": 1.45,
+      "support": 0.0018,
+      "category": "produce"
+    }
+  ],
+  "shredded parmesan": [
+    {
+      "item": "Banana",
+      "confidence": 0.23,
+      "lift": 1.39,
+      "support": 0.003,
+      "category": "produce"
+    }
+  ],
+  "skim milk": [
+    {
+      "item": "Banana",
+      "confidence": 0.248,
+      "lift": 1.51,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "small hass avocado": [
+    {
+      "item": "Banana",
+      "confidence": 0.29,
+      "lift": 1.76,
+      "support": 0.005,
+      "category": "produce"
+    }
+  ],
+  "sour cream": [
+    {
+      "item": "Banana",
+      "confidence": 0.209,
+      "lift": 1.27,
+      "support": 0.0015,
+      "category": "produce"
+    }
+  ],
+  "sourdough bread": [
+    {
+      "item": "Banana",
+      "confidence": 0.25,
+      "lift": 1.52,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "spaghetti": [
+    {
+      "item": "Banana",
+      "confidence": 0.263,
+      "lift": 1.6,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "sparkling lemon water": [
+    {
+      "item": "Sparkling Water Grapefruit",
+      "confidence": 0.278,
+      "lift": 10.47,
+      "support": 0.0032,
+      "category": "beverages"
+    },
+    {
+      "item": "Lime Sparkling Water",
+      "confidence": 0.269,
+      "lift": 16.28,
+      "support": 0.0031,
+      "category": "beverages"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.209,
+      "lift": 1.27,
+      "support": 0.0024,
+      "category": "produce"
+    }
+  ],
+  "sparkling water berry": [
+    {
+      "item": "Sparkling Water Grapefruit",
+      "confidence": 0.356,
+      "lift": 13.4,
+      "support": 0.0021,
+      "category": "beverages"
+    },
+    {
+      "item": "Lime Sparkling Water",
+      "confidence": 0.244,
+      "lift": 14.73,
+      "support": 0.0015,
+      "category": "beverages"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.203,
+      "lift": 1.23,
+      "support": 0.0012,
+      "category": "produce"
+    },
+    {
+      "item": "Sparkling Lemon Water",
+      "confidence": 0.203,
+      "lift": 17.63,
+      "support": 0.0012,
+      "category": "beverages"
+    }
+  ],
+  "sparkling water grapefruit": [
+    {
+      "item": "Banana",
+      "confidence": 0.209,
+      "lift": 1.27,
+      "support": 0.0055,
+      "category": "produce"
+    }
+  ],
+  "spinach": [
+    {
+      "item": "Banana",
+      "confidence": 0.271,
+      "lift": 1.65,
+      "support": 0.0016,
+      "category": "produce"
+    }
+  ],
+  "strawberries": [
+    {
+      "item": "Banana",
+      "confidence": 0.292,
+      "lift": 1.77,
+      "support": 0.0144,
+      "category": "produce"
+    }
+  ],
+  "strawberry preserves": [
+    {
+      "item": "Banana",
+      "confidence": 0.249,
+      "lift": 1.51,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "super spinach! baby spinach, baby bok choy, sweet baby kale": [
+    {
+      "item": "Banana",
+      "confidence": 0.256,
+      "lift": 1.55,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "tilapia filet": [
+    {
+      "item": "Banana",
+      "confidence": 0.219,
+      "lift": 1.33,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "total 0% greek yogurt": [
+    {
+      "item": "Banana",
+      "confidence": 0.297,
+      "lift": 1.8,
+      "support": 0.0027,
+      "category": "produce"
+    }
+  ],
+  "total 0% nonfat greek yogurt": [
+    {
+      "item": "Banana",
+      "confidence": 0.27,
+      "lift": 1.64,
+      "support": 0.0026,
+      "category": "produce"
+    }
+  ],
+  "total 0% nonfat plain greek yogurt": [
+    {
+      "item": "Banana",
+      "confidence": 0.272,
+      "lift": 1.65,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "total 0% raspberry yogurt": [
+    {
+      "item": "Banana",
+      "confidence": 0.315,
+      "lift": 1.91,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "total 0% with honey nonfat greek strained yogurt": [
+    {
+      "item": "Banana",
+      "confidence": 0.272,
+      "lift": 1.65,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "total 2% all natural greek strained yogurt with honey": [
+    {
+      "item": "Banana",
+      "confidence": 0.303,
+      "lift": 1.84,
+      "support": 0.0025,
+      "category": "produce"
+    },
+    {
+      "item": "Total 2% with Strawberry Lowfat Greek Strained Yogurt",
+      "confidence": 0.238,
+      "lift": 23.07,
+      "support": 0.0019,
+      "category": "dairy"
+    }
+  ],
+  "total 2% all natural low fat 2% milkfat greek strained yogurt": [
+    {
+      "item": "Banana",
+      "confidence": 0.243,
+      "lift": 1.47,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "total 2% all natural plain greek yogurt": [
+    {
+      "item": "Banana",
+      "confidence": 0.254,
+      "lift": 1.54,
+      "support": 0.0015,
+      "category": "produce"
+    }
+  ],
+  "total 2% greek strained yogurt with cherry 5.3 oz": [
+    {
+      "item": "Total 2% Lowfat Greek Strained Yogurt With Blueberry",
+      "confidence": 0.303,
+      "lift": 41.93,
+      "support": 0.0018,
+      "category": "dairy"
+    },
+    {
+      "item": "Total 2% with Strawberry Lowfat Greek Strained Yogurt",
+      "confidence": 0.302,
+      "lift": 29.32,
+      "support": 0.0018,
+      "category": "dairy"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.298,
+      "lift": 1.81,
+      "support": 0.0018,
+      "category": "produce"
+    },
+    {
+      "item": "Total 2% Lowfat Greek Strained Yogurt with Peach",
+      "confidence": 0.259,
+      "lift": 39.52,
+      "support": 0.0016,
+      "category": "dairy"
+    }
+  ],
+  "total 2% lowfat greek strained yogurt with blueberry": [
+    {
+      "item": "Total 2% with Strawberry Lowfat Greek Strained Yogurt",
+      "confidence": 0.468,
+      "lift": 45.4,
+      "support": 0.0034,
+      "category": "dairy"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.296,
+      "lift": 1.79,
+      "support": 0.0021,
+      "category": "produce"
+    },
+    {
+      "item": "Total 2% Lowfat Greek Strained Yogurt with Peach",
+      "confidence": 0.29,
+      "lift": 44.17,
+      "support": 0.0021,
+      "category": "dairy"
+    },
+    {
+      "item": "Total 2% Greek Strained Yogurt with Cherry 5.3 oz",
+      "confidence": 0.255,
+      "lift": 41.93,
+      "support": 0.0018,
+      "category": "dairy"
+    }
+  ],
+  "total 2% lowfat greek strained yogurt with peach": [
+    {
+      "item": "Total 2% with Strawberry Lowfat Greek Strained Yogurt",
+      "confidence": 0.428,
+      "lift": 41.54,
+      "support": 0.0028,
+      "category": "dairy"
+    },
+    {
+      "item": "Total 2% Lowfat Greek Strained Yogurt With Blueberry",
+      "confidence": 0.319,
+      "lift": 44.17,
+      "support": 0.0021,
+      "category": "dairy"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.293,
+      "lift": 1.78,
+      "support": 0.0019,
+      "category": "produce"
+    },
+    {
+      "item": "Total 2% Greek Strained Yogurt with Cherry 5.3 oz",
+      "confidence": 0.241,
+      "lift": 39.52,
+      "support": 0.0016,
+      "category": "dairy"
+    }
+  ],
+  "total 2% lowfat plain greek yogurt": [
+    {
+      "item": "Banana",
+      "confidence": 0.278,
+      "lift": 1.69,
+      "support": 0.0015,
+      "category": "produce"
+    }
+  ],
+  "total 2% with strawberry lowfat greek strained yogurt": [
+    {
+      "item": "Total 2% Lowfat Greek Strained Yogurt With Blueberry",
+      "confidence": 0.328,
+      "lift": 45.4,
+      "support": 0.0034,
+      "category": "dairy"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.295,
+      "lift": 1.79,
+      "support": 0.003,
+      "category": "produce"
+    },
+    {
+      "item": "Total 2% Lowfat Greek Strained Yogurt with Peach",
+      "confidence": 0.273,
+      "lift": 41.54,
+      "support": 0.0028,
+      "category": "dairy"
+    }
+  ],
+  "total greek strained yogurt": [
+    {
+      "item": "Banana",
+      "confidence": 0.219,
+      "lift": 1.33,
+      "support": 0.0019,
+      "category": "produce"
+    }
+  ],
+  "uncured genoa salami": [
+    {
+      "item": "Banana",
+      "confidence": 0.23,
+      "lift": 1.4,
+      "support": 0.0033,
+      "category": "produce"
+    }
+  ],
+  "uncured hickory smoked sunday bacon": [
+    {
+      "item": "Banana",
+      "confidence": 0.202,
+      "lift": 1.23,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "uncured slow cooked ham": [
+    {
+      "item": "Banana",
+      "confidence": 0.227,
+      "lift": 1.38,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "unsalted butter": [
+    {
+      "item": "Banana",
+      "confidence": 0.226,
+      "lift": 1.37,
+      "support": 0.0027,
+      "category": "produce"
+    }
+  ],
+  "unsweetened original almond breeze almond milk": [
+    {
+      "item": "Banana",
+      "confidence": 0.285,
+      "lift": 1.73,
+      "support": 0.0034,
+      "category": "produce"
+    }
+  ],
+  "unsweetened vanilla almond milk": [
+    {
+      "item": "Banana",
+      "confidence": 0.226,
+      "lift": 1.37,
+      "support": 0.002,
+      "category": "produce"
+    }
+  ],
+  "vanilla almond breeze almond milk": [
+    {
+      "item": "Banana",
+      "confidence": 0.29,
+      "lift": 1.76,
+      "support": 0.0031,
+      "category": "produce"
+    }
+  ],
+  "vanilla skyr nonfat yogurt": [
+    {
+      "item": "Icelandic Style Skyr Blueberry Non-fat Yogurt",
+      "confidence": 0.382,
+      "lift": 54.76,
+      "support": 0.0025,
+      "category": "dairy"
+    },
+    {
+      "item": "Non Fat Raspberry Yogurt",
+      "confidence": 0.289,
+      "lift": 48.2,
+      "support": 0.0019,
+      "category": "dairy"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.239,
+      "lift": 1.45,
+      "support": 0.0016,
+      "category": "produce"
+    },
+    {
+      "item": "Nonfat Icelandic Style Strawberry Yogurt",
+      "confidence": 0.224,
+      "lift": 56.93,
+      "support": 0.0015,
+      "category": "dairy"
+    }
+  ],
+  "vine ripe tomatoes": [
+    {
+      "item": "Banana",
+      "confidence": 0.291,
+      "lift": 1.77,
+      "support": 0.0015,
+      "category": "produce"
+    }
+  ],
+  "watermelon chunks": [
+    {
+      "item": "Banana",
+      "confidence": 0.225,
+      "lift": 1.37,
+      "support": 0.0019,
+      "category": "produce"
+    }
+  ],
+  "white corn": [
+    {
+      "item": "Banana",
+      "confidence": 0.254,
+      "lift": 1.54,
+      "support": 0.0016,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Strawberries",
+      "confidence": 0.219,
+      "lift": 2.4,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "white onion": [
+    {
+      "item": "Banana",
+      "confidence": 0.246,
+      "lift": 1.49,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "whole almonds": [
+    {
+      "item": "Banana",
+      "confidence": 0.234,
+      "lift": 1.42,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "whole milk": [
+    {
+      "item": "Banana",
+      "confidence": 0.245,
+      "lift": 1.49,
+      "support": 0.003,
+      "category": "produce"
+    }
+  ],
+  "whole strawberries": [
+    {
+      "item": "Banana",
+      "confidence": 0.374,
+      "lift": 2.27,
+      "support": 0.0012,
+      "category": "produce"
+    }
+  ],
+  "whole wheat bread": [
+    {
+      "item": "Banana",
+      "confidence": 0.297,
+      "lift": 1.8,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "xl emerald white seedless grapes": [
+    {
+      "item": "Banana",
+      "confidence": 0.353,
+      "lift": 2.15,
+      "support": 0.002,
+      "category": "produce"
+    }
+  ],
+  "yellow bell pepper": [
+    {
+      "item": "Orange Bell Pepper",
+      "confidence": 0.282,
+      "lift": 20.2,
+      "support": 0.0025,
+      "category": "produce"
+    },
+    {
+      "item": "Banana",
+      "confidence": 0.261,
+      "lift": 1.58,
+      "support": 0.0023,
+      "category": "produce"
+    }
+  ],
+  "yellow onions": [
+    {
+      "item": "Banana",
+      "confidence": 0.288,
+      "lift": 1.75,
+      "support": 0.0074,
+      "category": "produce"
+    }
+  ],
+  "yokids blueberry & strawberry/vanilla yogurt": [
+    {
+      "item": "Banana",
+      "confidence": 0.295,
+      "lift": 1.79,
+      "support": 0.0013,
+      "category": "produce"
+    }
+  ],
+  "yogurt, strained low-fat, coconut": [
+    {
+      "item": "Banana",
+      "confidence": 0.247,
+      "lift": 1.5,
+      "support": 0.001,
+      "category": "produce"
+    }
+  ],
+  "blackberries": [
+    {
+      "item": "Raspberries",
+      "confidence": 0.25,
+      "lift": 12.71,
+      "support": 0.0019,
+      "category": "canned_goods"
+    },
+    {
+      "item": "Strawberries",
+      "confidence": 0.234,
+      "lift": 4.75,
+      "support": 0.0018,
+      "category": "produce"
+    }
+  ],
+  "blackberry cucumber sparkling water": [
+    {
+      "item": "Kiwi Sandia Sparkling Water",
+      "confidence": 0.275,
+      "lift": 89.88,
+      "support": 0.0011,
+      "category": "beverages"
+    }
+  ],
+  "kiwi sandia sparkling water": [
+    {
+      "item": "Blackberry Cucumber Sparkling Water",
+      "confidence": 0.357,
+      "lift": 89.88,
+      "support": 0.0011,
+      "category": "beverages"
+    }
+  ],
+  "blueberry yoghurt": [
+    {
+      "item": "Raspberry Yoghurt",
+      "confidence": 0.299,
+      "lift": 100.88,
+      "support": 0.0011,
+      "category": "dairy"
+    }
+  ],
+  "raspberry yoghurt": [
+    {
+      "item": "Blueberry Yoghurt",
+      "confidence": 0.358,
+      "lift": 100.88,
+      "support": 0.0011,
+      "category": "dairy"
+    }
+  ],
+  "goat cheese crumbles": [
+    {
+      "item": "Organic Baby Spinach",
+      "confidence": 0.224,
+      "lift": 2.67,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "lemon sparkling water": [
+    {
+      "item": "Grapefruit Sparkling Water",
+      "confidence": 0.394,
+      "lift": 76.54,
+      "support": 0.0013,
+      "category": "beverages"
+    }
+  ],
+  "grapefruit sparkling water": [
+    {
+      "item": "Lemon Sparkling Water",
+      "confidence": 0.25,
+      "lift": 76.54,
+      "support": 0.0013,
+      "category": "beverages"
+    }
+  ],
+  "packaged grape tomatoes": [
+    {
+      "item": "Hass Avocados",
+      "confidence": 0.243,
+      "lift": 14.34,
+      "support": 0.001,
+      "category": "canned_goods"
+    }
+  ],
+  "non fat acai & mixed berries yogurt": [
+    {
+      "item": "Icelandic Style Skyr Blueberry Non-fat Yogurt",
+      "confidence": 0.47,
+      "lift": 67.46,
+      "support": 0.0015,
+      "category": "dairy"
+    },
+    {
+      "item": "Non Fat Raspberry Yogurt",
+      "confidence": 0.37,
+      "lift": 61.83,
+      "support": 0.0011,
+      "category": "dairy"
+    }
+  ],
+  "nonfat icelandic style strawberry yogurt": [
+    {
+      "item": "Icelandic Style Skyr Blueberry Non-fat Yogurt",
+      "confidence": 0.434,
+      "lift": 62.24,
+      "support": 0.0017,
+      "category": "dairy"
+    },
+    {
+      "item": "Vanilla Skyr Nonfat Yogurt",
+      "confidence": 0.377,
+      "lift": 56.93,
+      "support": 0.0015,
+      "category": "dairy"
+    },
+    {
+      "item": "Non Fat Raspberry Yogurt",
+      "confidence": 0.356,
+      "lift": 59.47,
+      "support": 0.0014,
+      "category": "dairy"
+    }
+  ],
+  "organic cilantro": [
+    {
+      "item": "Limes",
+      "confidence": 0.259,
+      "lift": 5.26,
+      "support": 0.0062,
+      "category": "produce"
+    }
+  ],
+  "organic jalapeno pepper": [
+    {
+      "item": "Limes",
+      "confidence": 0.262,
+      "lift": 5.32,
+      "support": 0.0018,
+      "category": "produce"
+    },
+    {
+      "item": "Organic Cilantro",
+      "confidence": 0.206,
+      "lift": 8.53,
+      "support": 0.0014,
+      "category": "produce"
+    }
+  ],
+  "organic baby kale mix": [
+    {
+      "item": "Organic Baby Spinach",
+      "confidence": 0.302,
+      "lift": 3.61,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "organic coconut milk": [
+    {
+      "item": "Organic Baby Spinach",
+      "confidence": 0.203,
+      "lift": 2.43,
+      "support": 0.0018,
+      "category": "produce"
+    }
+  ],
+  "organic egg whites": [
+    {
+      "item": "Organic Baby Spinach",
+      "confidence": 0.24,
+      "lift": 2.87,
+      "support": 0.0016,
+      "category": "produce"
+    }
+  ],
+  "organic dill": [
+    {
+      "item": "Organic Italian Parsley Bunch",
+      "confidence": 0.203,
+      "lift": 9.52,
+      "support": 0.0011,
+      "category": "produce"
+    }
+  ],
+  "organic whole milk strawberry beet berry yogurt pouch": [
+    {
+      "item": "Yotoddler Organic Pear Spinach Mango Yogurt",
+      "confidence": 0.439,
+      "lift": 205.41,
+      "support": 0.001,
+      "category": "dairy"
+    }
+  ],
+  "yotoddler organic pear spinach mango yogurt": [
+    {
+      "item": "Organic Whole Milk Strawberry Beet Berry Yogurt Pouch",
+      "confidence": 0.485,
+      "lift": 205.41,
+      "support": 0.001,
+      "category": "dairy"
+    }
+  ],
+  "organic yellow squash": [
+    {
+      "item": "Organic Zucchini",
+      "confidence": 0.487,
+      "lift": 12.99,
+      "support": 0.0019,
+      "category": "produce"
+    }
+  ],
+  "raspberries": [
+    {
+      "item": "Strawberries",
+      "confidence": 0.211,
+      "lift": 4.27,
+      "support": 0.0041,
+      "category": "produce"
+    }
+  ],
+  "zero calorie cola": [
+    {
+      "item": "Soda",
+      "confidence": 0.5,
+      "lift": 45.43,
+      "support": 0.0013,
+      "category": "beverages"
+    }
+  ]
+}

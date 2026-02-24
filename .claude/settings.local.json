@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(cd:*)"
+      "Bash(cd:*)",
+      "Bash(cd \"/Users/ranaraunitrazsingh/Desktop/Placements Assignments/Unthinkable solutions/voice-shopping-assistant\" && python -c \"\nimport sys\nsys.path.insert\\(0, '.'\\)\nfrom backend.config import settings\nfrom backend.stt.groq_stt_service import GroqSTTService\nfrom backend.api.routes.voice import router\nprint\\('All imports OK'\\)\nprint\\('GROQ_API_KEY set:', bool\\(settings.GROQ_API_KEY\\)\\)\nprint\\('GROQ_STT_MODEL:', settings.GROQ_STT_MODEL\\)\n\" 2>&1)",
+      "Bash(cd \"/Users/ranaraunitrazsingh/Desktop/Placements Assignments/Unthinkable solutions/voice-shopping-assistant\" && python -c \"\nimport sys\nsys.path.insert\\(0, '.'\\)\nfrom backend.main import app\nprint\\('FastAPI app loaded OK'\\)\nprint\\('Routes:'\\)\nfor route in app.routes:\n    if hasattr\\(route, 'methods'\\):\n        print\\(f'  {list\\(route.methods\\)} {route.path}'\\)\n\" 2>&1)",
+      "Bash(tail:*)",
+      "Bash(grep:*)",
+      "Bash(head:*)"
     ]
   }
 }
