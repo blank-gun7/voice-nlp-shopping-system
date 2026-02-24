@@ -133,6 +133,12 @@ class SpacyParser:
                 # Use word-boundary check for single words
                 if " " in kw:
                     if kw in text_lower:
+                        # Guard: "remove all the milk" is remove_item, not clear_list
+                        if intent == "clear_list":
+                            remaining = text_lower.split(kw, 1)[1].strip()
+                            harmless = {"", "items", "things", "from my list", "from the list", "from list", "list"}
+                            if remaining and remaining not in harmless:
+                                continue
                         return intent
                 else:
                     if re.search(r"\b" + re.escape(kw) + r"\b", text_lower):

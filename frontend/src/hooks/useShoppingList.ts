@@ -32,14 +32,35 @@ export function useShoppingList(): UseShoppingListReturn {
       dispatch({ type: "SET_LIST_LOADING", payload: true });
       try {
         let listId = getStoredListId();
-        if (listId === null) {
-          const created = await api.createList("My Shopping List");
-          listId = created.id;
-          setStoredListId(listId);
+
+        if (listId !== null) {
+          // Try fetching the stored list
+          try {
+            const list = await api.getList(listId);
+            if (!cancelled) dispatch({ type: "SET_LIST", payload: list });
+            return;
+          } catch {
+            // Stored ID is stale — fall through to recovery
+            listId = null;
+          }
+        }
+
+        // No stored ID or stored ID was stale — try the seeded default list (ID 1)
+        try {
+          const list = await api.getList(1);
+          if (!cancelled) {
+            setStoredListId(1);
+            dispatch({ type: "SET_LIST", payload: list });
+          }
+          return;
+        } catch {
+          // Seeded list doesn't exist — create a new one
+        }
+
+        const created = await api.createList("My Shopping List");
+        if (!cancelled) {
+          setStoredListId(created.id);
           dispatch({ type: "SET_LIST", payload: created });
-        } else {
-          const list = await api.getList(listId);
-          if (!cancelled) dispatch({ type: "SET_LIST", payload: list });
         }
       } catch {
         if (!cancelled) {

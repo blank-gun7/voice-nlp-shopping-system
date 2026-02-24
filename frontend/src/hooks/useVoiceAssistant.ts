@@ -6,7 +6,7 @@
  *   → api.voiceCommand → dispatch result to AppContext
  */
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useAppContext } from "../App";
 import { api } from "../services/api";
 import { useAudioRecorder } from "./useAudioRecorder";
@@ -36,7 +36,7 @@ export interface UseVoiceAssistantReturn {
 
 export function useVoiceAssistant(): UseVoiceAssistantReturn {
   const { state, dispatch } = useAppContext();
-  const { recorderState, startRecording, stopRecording, cancelRecording } =
+  const { recorderState, startRecording, stopRecording, cancelRecording, onSilenceRef } =
     useAudioRecorder();
   const { isSupported, interimTranscript, startListening, stopListening } =
     useWebSpeechFallback();
@@ -83,7 +83,7 @@ export function useVoiceAssistant(): UseVoiceAssistantReturn {
     }
 
     try {
-      const result = await api.voiceCommand(audioBlob);
+      const result = await api.voiceCommand(audioBlob, getStoredListId() ?? undefined);
       dispatch({ type: "SET_VOICE_RESULT", payload: result });
       dispatch({ type: "SET_LIST", payload: result.updated_list });
       dispatch({ type: "SET_VOICE_STATE", payload: "confirmed" });
@@ -107,6 +107,22 @@ export function useVoiceAssistant(): UseVoiceAssistantReturn {
       });
     }
   };
+
+  // Keep a stable ref to stopVoice to avoid stale closures in silence callback
+  const stopVoiceRef = useRef(stopVoice);
+  useEffect(() => {
+    stopVoiceRef.current = stopVoice;
+  });
+
+  // Wire silence auto-stop when recording starts
+  useEffect(() => {
+    if (recorderState === "recording") {
+      onSilenceRef.current = () => stopVoiceRef.current();
+    }
+    return () => {
+      onSilenceRef.current = null;
+    };
+  }, [recorderState, onSilenceRef]);
 
   const cancelVoice = (): void => {
     if (isSupported) stopListening();

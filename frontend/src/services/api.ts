@@ -75,9 +75,10 @@ export const api = {
    * POST /api/voice/command
    * Full pipeline: audio → STT → NLP → list action → response.
    */
-  async voiceCommand(audioBlob: Blob): Promise<VoiceCommandResponse> {
+  async voiceCommand(audioBlob: Blob, listId?: number): Promise<VoiceCommandResponse> {
     const form = new FormData();
     form.append("file", audioBlob, "recording.webm");
+    if (listId) form.append("list_id", String(listId));
     return request<VoiceCommandResponse>("/api/voice/command", {
       method: "POST",
       body: form,
@@ -152,6 +153,16 @@ export const api = {
    */
   async removeItem(listId: number, itemId: number): Promise<void> {
     await request<unknown>(`/api/lists/${listId}/items/${itemId}`, {
+      method: "DELETE",
+    });
+  },
+
+  /**
+   * DELETE /api/lists/{id}/items
+   * Clear all items from the list (used by Place Order).
+   */
+  async clearList(listId: number): Promise<void> {
+    await request<unknown>(`/api/lists/${listId}/items`, {
       method: "DELETE",
     });
   },

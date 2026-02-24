@@ -96,6 +96,7 @@ class Suggestions(BaseModel):
     substitutes: list[SuggestionItem] = []
     seasonal: list[SuggestionItem] = []
     reorder: list[dict] = []
+    catalog_matches: list[SuggestionItem] = []
 
 
 class VoiceCommandResponse(BaseModel):

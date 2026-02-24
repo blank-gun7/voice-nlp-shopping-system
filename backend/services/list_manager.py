@@ -232,8 +232,15 @@ class ListManager:
 # ── Module-level helpers ───────────────────────────────────────────────────────
 
 def _find_item(db: Session, list_id: int, name: str) -> Optional[ListItem]:
-    """Find an item by exact match first, then fuzzy match."""
+    """Find an item by exact match, then article-stripped, then substring, then fuzzy."""
     name_lower = name.lower().strip()
+
+    # Strip leading articles for matching
+    for article in ("the ", "a ", "an ", "some "):
+        if name_lower.startswith(article):
+            name_lower = name_lower[len(article):]
+            break
+
     # Exact match
     item = db.query(ListItem).filter(
         ListItem.list_id == list_id,
@@ -242,8 +249,14 @@ def _find_item(db: Session, list_id: int, name: str) -> Optional[ListItem]:
     if item:
         return item
 
-    # Fuzzy match
     items = db.query(ListItem).filter(ListItem.list_id == list_id).all()
+
+    # Substring/contains match — handles "fresh mango" matching "mango" and vice versa
+    for candidate in items:
+        if name_lower in candidate.item_name_lower or candidate.item_name_lower in name_lower:
+            return candidate
+
+    # Fuzzy match
     best: Optional[ListItem] = None
     best_score = 0.0
     for candidate in items:

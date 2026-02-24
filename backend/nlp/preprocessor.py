@@ -28,7 +28,7 @@ NUMBER_WORDS: dict[str, float] = {
 _FILLER_WORDS: set[str] = {
     "um", "uh", "erm", "er", "hmm", "hm", "ah", "oh",
     "like", "basically", "literally", "actually", "really",
-    "kind", "sort", "of", "i mean", "you know", "well", "so",
+    "kind", "sort", "i mean", "you know", "well", "so",
     "just", "maybe", "perhaps", "please",
 }
 

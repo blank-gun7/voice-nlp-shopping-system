@@ -33,8 +33,8 @@ export default function MyListPage() {
     recordPurchase(allItems);
 
     try {
-      // Remove all items from the list
-      await Promise.all(allItems.map((item) => api.removeItem(listId, item.id)));
+      // Clear all items in one API call
+      await api.clearList(listId);
 
       // Refresh list to reflect empty state
       const updated = await api.getList(listId);

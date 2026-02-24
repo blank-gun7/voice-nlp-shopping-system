@@ -7,7 +7,7 @@ POST /api/voice/command     — audio → STT → NLP → list action → respon
 import logging
 import time
 
-from fastapi import APIRouter, File, HTTPException, Request, UploadFile
+from fastapi import APIRouter, File, Form, HTTPException, Request, UploadFile
 
 from backend.models.schemas import (
     ActionResult,
@@ -21,7 +21,7 @@ from backend.models.schemas import (
 router = APIRouter(prefix="/api/voice", tags=["voice"])
 logger = logging.getLogger(__name__)
 
-DEFAULT_LIST_ID = 1  # Single default list (no auth in v1)
+DEFAULT_LIST_ID = 1  # Fallback list ID (no auth in v1)
 
 
 # ── POST /api/voice/transcribe ────────────────────────────────────────────────
@@ -99,6 +99,7 @@ async def process_text(request: Request, body: ProcessRequest) -> ParsedCommand:
 async def voice_command(
     request: Request,
     file: UploadFile = File(..., description="Audio file from MediaRecorder"),
+    list_id: int = Form(DEFAULT_LIST_ID),
 ) -> VoiceCommandResponse:
     """Full pipeline: audio → STT → NLP → list action → response.
 
@@ -158,7 +159,7 @@ async def voice_command(
     t2 = time.perf_counter()
     try:
         action_result, updated_list = await list_mgr.execute(
-            list_id=DEFAULT_LIST_ID,
+            list_id=list_id,
             parsed=parsed,
             raw_transcript=transcript,
         )
@@ -174,7 +175,7 @@ async def voice_command(
             t3 = time.perf_counter()
             suggestions = await rec_engine.get_suggestions(
                 item_name=parsed.item,
-                list_id=DEFAULT_LIST_ID,
+                list_id=list_id,
             )
             latency["recommendations"] = round(time.perf_counter() - t3, 3)
         except Exception as exc:

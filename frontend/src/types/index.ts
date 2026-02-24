@@ -75,6 +75,7 @@ export interface Suggestions {
   substitutes: SuggestionItem[];
   seasonal: SuggestionItem[];
   reorder: ReorderItem[];
+  catalog_matches: SuggestionItem[];
 }
 
 export interface SuggestionItem {

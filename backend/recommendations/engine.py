@@ -116,12 +116,45 @@ class RecommendationEngine:
         subs_dedup = _dedup(subs_raw)
         seasonal_dedup = _dedup(seasonal_raw)
 
+        # Catalog matches — items whose names contain the queried item as a substring
+        catalog_matches_raw = self._catalog_search(item_name, top_k=8)
+        catalog_dedup = _dedup(catalog_matches_raw)
+
         return Suggestions(
             co_purchase=[SuggestionItem(name=n, reason="Frequently bought together") for n in co_dedup],
             substitutes=[SuggestionItem(name=n, reason="Similar item") for n in subs_dedup],
             seasonal=[SuggestionItem(name=n, reason="In season now") for n in seasonal_dedup],
             reorder=[ReorderItem(name=r["name"], reason=r["reason"]) for r in reorder_raw],
+            catalog_matches=[SuggestionItem(name=n, reason="Related item") for n in catalog_dedup],
         )
+
+    @staticmethod
+    def _catalog_search(item_name: str, top_k: int = 8) -> list[str]:
+        """Search catalog for items related to the given item name.
+
+        Returns items that contain the query as a substring, sorted by relevance:
+        exact match first, then starts-with, then contains.
+        """
+        from backend.recommendations._catalog import CATALOG
+
+        query = item_name.lower().strip()
+        if not query:
+            return []
+
+        matches: list[tuple[int, str]] = []
+        for key, product in CATALOG.items():
+            if key == query:
+                continue  # Skip exact self-match
+            if query in key:
+                # Prioritise: starts-with (1) > contains (2)
+                priority = 1 if key.startswith(query) else 2
+                matches.append((priority, product["name_lower"]))
+            elif key in query:
+                # Reverse containment: "organic mango" query matches "mango" in catalog
+                matches.append((3, product["name_lower"]))
+
+        matches.sort(key=lambda x: x[0])
+        return [name for _, name in matches[:top_k]]
 
     def get_home_data(self, user_id: str = "default_user") -> dict:
         """Assemble homepage data: seasonal, popular from catalog, reorder, categories.

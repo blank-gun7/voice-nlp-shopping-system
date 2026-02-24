@@ -121,6 +121,22 @@ def update_item(
     return item_out
 
 
+# ── DELETE /api/lists/{id}/items (clear all) ──────────────────────────────────
+
+@router.delete("/{list_id}/items", response_model=ActionResult)
+def clear_list_items(
+    list_id: int,
+    request: Request,
+    db: Session = Depends(get_db),
+) -> ActionResult:
+    """Remove all items from the list (used by Place Order)."""
+    sl = db.get(ShoppingList, list_id)
+    if not sl:
+        raise HTTPException(status_code=404, detail=f"List {list_id} not found")
+    mgr: ListManager = _get_list_manager(request)
+    return mgr.clear(db, list_id)
+
+
 # ── DELETE /api/lists/{id}/items/{item_id} ────────────────────────────────────
 
 @router.delete("/{list_id}/items/{item_id}", response_model=ActionResult)
